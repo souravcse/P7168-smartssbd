@@ -1,9 +1,0 @@
-<resources>
-
-    <group name="treencol">
-        <js>/assets/treencol/treencol-ajax-form-1.0.js</js>
-        <js>/assets/treencol/treencol-ajax-page-load-1.0.js</js>
-        <js>/assets/treencol/treencol-ajax-file-upload-1.0.js</js>
-        <js>/assets/treencol/treencol-jquery-ui-autocomplete-1.0.js</js>
-    </group>
-</resources>

@@ -5,8 +5,86 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45dd7373-d3eb-4839-b9c6-1cd18d4e6fd6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/frontend/model/ModelHeader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/system/views/index_coming_html.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/assets/admin.assets.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/TemplateHeader.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/TemplateHeader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/TemplateLeftSidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/TemplateLeftSidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/access/controllers/DashBoard.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/access/controllers/DashBoard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/access/controllers/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/access/controllers/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/access/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/access/routes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/access/views/dashboard_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/access/views/dashboard_html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/access/views/login_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/access/views/login_html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/css/dore.light.blue.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/css/dore.main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/css/dore.style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/balloon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/bebinca-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/big-buck-bunny-poster.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/card-thumb-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/card-thumb-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/card-thumb-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/card-thumb-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/carousel-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/carousel-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/carousel-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/cheesecake-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/chocolate-cake-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/coconut-cake.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/cremeschnitte-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/detail.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/fat-rascal-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/financier-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/fruitcake-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/genoise-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/gingerbread-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/goose-breast-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/login-balloon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/logo-black.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/logo-mobile.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/logo-white.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/magdalena-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/marble-cake-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/menu-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/menu-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/menu-single.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/merveilleux-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/napoleonshat-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/notification-thumb-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/notification-thumb-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/notification-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/pargin-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/parkin-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/petit-gateau-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/plane.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/profile-pic-l-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/profile-pic-l-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/profile-pic-l-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/profile-pic-l-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/profile-pic-l-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/profile-pic-l-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/profile-pic-l-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/profile-pic-l-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/profile-pic-l-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/profile-pic-l-9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/profile-pic-l.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/salzburger-nockerl-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/souffle-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/streuselkuchen-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/tea-loaf-thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/thumb-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/thumb-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/thumb-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/img/thumb-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/js/change-password.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/js/crisp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/js/data-process.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/js/dore.script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/js/plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/js/scripts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-dore/js/two-factor-auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/assets/develop.assets.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +128,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "G:/xampp/htdocs/P7168-smartssbd/app",
+    "last_opened_file_path": "G:/xampp/htdocs/P7168-smartssbd/assets/template-smartssbd/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,9 +138,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\xampp\htdocs\P7168-smartssbd\assets\template-smartssbd\img" />
       <recent name="G:\xampp\htdocs\P7168-smartssbd\app" />
       <recent name="G:\xampp\htdocs\P7168-smartssbd" />
-      <recent name="G:\xampp\htdocs\P7168-smartssbd\assets\template-smartssbd\img" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -76,7 +154,7 @@
       <workItem from="1665830594170" duration="76000" />
       <workItem from="1665830673990" duration="336000" />
       <workItem from="1665831028858" duration="716000" />
-      <workItem from="1674471593656" duration="6110000" />
+      <workItem from="1674471593656" duration="11484000" />
     </task>
     <servers />
   </component>

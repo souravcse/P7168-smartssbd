@@ -29,7 +29,7 @@ $HeaderMeta = new HeaderMeta();
                     <div class="register-wrap p-5 bg-light shadow rounded-custom">
                         <h1 class="h3">Nice to Seeing You Again</h1>
 
-                        <form action="#" class="mt-4 register-form">
+                        <form action="" method="post" enctype="multipart/form-data" id="form" class="mt-4 register-form">
                             <div class="row">
                                 <div class="col-sm-12">
                                     <label for="email" class="mb-1">Email <span class="text-danger">*</span></label>
@@ -48,7 +48,6 @@ $HeaderMeta = new HeaderMeta();
                                     <button type="submit" class="btn btn-primary mt-3 d-block w-100">Submit</button>
                                 </div>
                             </div>
-
                         </form>
                     </div>
                 </div>

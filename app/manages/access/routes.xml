@@ -1,5 +1,5 @@
 <resources>
-    <controller val="DashBoard" pageTitle="Bikiran Attendance" validationToken="false" auth="true">
+    <controller val="DashBoard" pageTitle="Smart Solution For Software" validationToken="false" auth="false">
 
         <route val="dashboard/{month}/camp/json" post="dashBoardCampJson"/>
         <route val="dashboard/{status}/notification/json" post="dashBoardNtInfoJson"/>
@@ -21,7 +21,7 @@
         <route val="change/profile" get="changeProfile" post="changeProfilePost"/>
     </controller>
 
-    <controller val="Login" pageTitle="Bikiran Attendance" validationToken="false" auth="false">
+    <controller val="Login" pageTitle="Smart Solution For Software" validationToken="false" auth="false">
 
         <route val="approve/account" get="approveAccount" post="approveAccountPost"/>
         <route val="create/account" get="createAccount" post="createAccountPost"/>

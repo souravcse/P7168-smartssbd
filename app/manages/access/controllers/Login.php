@@ -20,7 +20,7 @@ class Login
         $User->loginProcess();
         $userIndex = $User->getUserIndex();
 
-        $defaultUrl = mkUrlWithIndex($userIndex, "dashboard");
+        $defaultUrl = mkUrlWithIndex($userIndex, "manage/dashboard");
 
         if ($getUrl) {
             //dd("oK Login");
