@@ -1,0 +1,7 @@
+<resources>
+    <MultyUsers type="bool" value="true"/>
+    <FileUploadDirectory type="string" value="cloud-uploads/"/>
+
+    <SessionAccess type="bool" value="true"/>
+    <TokenAccess type="bool" value="true" name="Secure-Access"/>
+</resources>

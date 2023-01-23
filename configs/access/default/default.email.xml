@@ -1,0 +1,14 @@
+<resources>
+    <default> <!--You Can Use Custom Group Name-->
+        <Host>magelbd.com</Host>
+        <Username>no-reply@magelbd.com</Username>
+        <Password>rz09f_sJB@]R</Password>
+        <Port>587</Port>
+
+        <FromEmail>no-reply@magelbd.com</FromEmail>
+        <FromName>no-reply@magelbd.com</FromName>
+
+        <ReplyToEmail>no-reply@magelbd.com</ReplyToEmail>
+        <ReplyToName>no-reply@magelbd.com</ReplyToName>
+    </default>
+</resources>

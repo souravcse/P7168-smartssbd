@@ -1,0 +1,35 @@
+<resources>
+    <controller val="DashBoard" pageTitle="Bikiran Attendance" validationToken="false" auth="true">
+
+        <route val="dashboard/{month}/camp/json" post="dashBoardCampJson"/>
+        <route val="dashboard/{status}/notification/json" post="dashBoardNtInfoJson"/>
+        <route val="dashboard" get="dashBoard"/>
+        <route val="/" get="dashBoard"/>
+    </controller>
+
+    <controller val="ForgetPassword" pageTitle="Bikiran Attendance" validationToken="false" auth="false">
+
+        <route val="reset/password" post="resetPasswordPost"/>
+        <route val="reset/email/code" post="resetEmailCodePost"/>
+        <route val="reset/email" post="resetEmailPost"/>
+        <route val="forget/password" get="forgetPassword" post="forgetPasswordPost"/>
+    </controller>
+
+    <controller val="ChangePassword" pageTitle="Bikiran Attendance" validationToken="false" auth="true">
+
+        <route val="change/password" get="changePassword" post="changePasswordPost"/>
+        <route val="change/profile" get="changeProfile" post="changeProfilePost"/>
+    </controller>
+
+    <controller val="Login" pageTitle="Bikiran Attendance" validationToken="false" auth="false">
+
+        <route val="approve/account" get="approveAccount" post="approveAccountPost"/>
+        <route val="create/account" get="createAccount" post="createAccountPost"/>
+        <route val="login" get="login" post="loginPost"/>
+    </controller>
+
+    <controller val="Access" pageTitle="Bikiran Attendance" validationToken="false" auth="false">
+
+        <route val="account" get="manageAccount" post="manageAccountPost"/>
+    </controller>
+</resources>

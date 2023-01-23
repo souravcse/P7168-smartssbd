@@ -1,0 +1,48 @@
+<resources>
+    <vlaidation>
+        <fvt>1</fvt>
+    </vlaidation>
+
+    <apache>
+        <display-errors>-1</display-errors>
+        <logs-errors>-1</logs-errors>
+        <memory-limit>-1</memory-limit>
+    </apache>
+
+    <time>
+        <zone>Asia/Dhaka</zone>
+    </time>
+    <system>
+        <loginUri>manage/login</loginUri>
+    </system>
+
+    <software>
+        <title>International School Pancharagh</title>
+        <description>International School Pancharagh</description>
+        <keywords>International School Pancharagh</keywords>
+        <imgUrl>/assets/images/treencol.com</imgUrl>
+        <type>software</type>
+        <!--<feedUrl></feedUrl>-->
+
+        <organizationName>International School Pancharagh</organizationName>
+        <organizationAddress>International School Pancharagh</organizationAddress>
+        <organizationPhone>+8801925******</organizationPhone>
+        <organizationFax>+8801925******</organizationFax>
+        <organizationWebsite>https://www.bikiran.com</organizationWebsite>
+        <organizationEmail>treencol@bikiran.com</organizationEmail>
+        <organizationLogoUrl>/assets/template-isp/image/logo.svg</organizationLogoUrl>
+    </software>
+
+    <fb>
+        <!--<app_id></app_id>-->
+    </fb>
+
+    <twitter>
+        <!--<card></card>
+        <creator></creator>-->
+    </twitter>
+
+    <google>
+        <analytics-code>software</analytics-code>
+    </google>
+</resources>

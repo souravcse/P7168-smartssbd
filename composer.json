@@ -1,0 +1,34 @@
+{
+  "version": "701",
+  "name": "treencol/treen7",
+  "authors": [
+    {
+      "name": "Kumar Bishojit Paul",
+      "email": "info@bikiran.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4.0",
+    "ext-curl": "*",
+    "ext-dom": "*",
+    "ext-fileinfo": "*",
+    "ext-gd": "*",
+    "ext-json": "*",
+    "ext-libxml": "*",
+    "ext-mbstring": "*",
+    "ext-mysqli": "*",
+    "ext-PDO": "*",
+    "ext-simplexml": "*",
+    "forked/mailreader": "^1.0.1",
+    "phpmailer/phpmailer": "^6.5",
+    "samdark/sitemap": "^2.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Config\\": "configs/",
+      "Core\\": "core/",
+      "Packages\\": "packages/"
+    }
+  }
+}

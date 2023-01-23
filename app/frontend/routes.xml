@@ -1,0 +1,8 @@
+<resources>
+
+    <controller val="Pages" pageTitle="About Us" validationToken="false" auth="false">
+
+        <route val="profile/academic" get="profilePageAcademic"/>
+        <route val="about-us" get="aboutPage"/>
+    </controller>
+</resources>

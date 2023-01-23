@@ -1,0 +1,82 @@
+<resources>
+    <group name="required">
+        <css>/assets/normalize-8.0.1/normalize.css</css> <!--Supporting Library, Priority Top-->
+        <css>/assets/animate/animate.css</css>
+        <css>/assets/custom-switch/component-custom-switch.min.css</css>
+
+        <js>/assets/jquery-3.4.1/jquery-3.4.1.min.js</js>
+        <js>https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js</js>
+        <js>https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js</js>
+    </group>
+
+    <group name="bootstrap">
+        <css>/assets/bootstrap-5.1.3/css/bootstrap.min.css</css>
+<!--        <css>/assets/bootstrap-5.1.3/css/floating-labels.css</css>-->
+        <js>/assets/bootstrap-5.1.3/js/bootstrap.bundle.js</js>
+        <js>/assets/bootstrap-5.1.3/js/bootstrap.min.js</js>
+    </group>
+    <group name="flatpickr">
+        <css>//cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css</css>
+        <js>//cdn.jsdelivr.net/npm/flatpickr</js>
+    </group>
+
+    <group name="fontawesome">
+        <css>/assets/fontawesome-free-5.9.0/css/all.min.css</css>
+    </group>
+
+    <group name="fonts">
+        <css>/assets/fonts/iconsmind/style.css</css>
+        <css>/assets/fonts/iconsmind-s/css/iconsminds.css</css>
+        <css>/assets/fonts/simple-line-icons/css/simple-line-icons.css</css>
+        <css>/assets/fonts/bn-Kiron/fonts.css</css>
+    </group>
+
+    <group name="data-tables">
+        <css>/assets/data-tables/datatables.min.css</css>
+        <js>/assets/data-tables/datatables.min.js</js>
+    </group>
+
+    <group name="jquery-ui">
+        <css>/assets/jquery-ui-1.12.1/jquery-ui.min.css</css>
+        <js>/assets/jquery-ui-1.12.1/jquery-ui.min.js</js>
+    </group>
+
+    <group name="date-picker">
+        <css>/assets/date-picker-tempusdominus-5.1.2/build/css/tempusdominus-bootstrap-4.min.css</css>
+        <js>/assets/date-picker-tempusdominus-5.1.2/build/js/tempusdominus-bootstrap-4.min.js</js>
+    </group>
+
+    <group name="fancybox">
+        <css>/assets/fancybox/dist/jquery.fancybox.min.css</css>
+        <js>/assets/fancybox/dist/jquery.fancybox.min.js</js>
+    </group>
+    <group name="lobibox-master">
+        <css>/assets/lobibox-master/dist/css/lobibox.min.css</css>
+        <js>/assets/lobibox-master/dist/js/lobibox.min.js</js>
+    </group>
+    <group name="live-template">
+        <js>/live-template.js</js>
+        <js>/assets/treencol/treencol-live-template.js</js>
+    </group>
+    <group name="treencol">
+        <css>/assets/treencol/treencol-basic-style.css</css>
+        <js>/assets/treencol/treencol-ajax-form-1.0.js</js>
+        <js>/assets/treencol/treencol-ajax-page-load-1.0.js</js>
+        <js>/assets/treencol/treencol-ajax-file-upload-1.0.js</js>
+        <js>/assets/treencol/treencol-jquery-ui-autocomplete-1.0.js</js>
+    </group>
+
+    <group name="template-smartssbd">
+
+        <css>/assets/template-smartssbd/css/main.css</css>
+        <css>/assets/template-smartssbd/css/custom.css</css>
+
+        <js>/assets/template-smartssbd/js/vendors/jquery-3.6.0.min.js</js>
+        <js>/assets/template-smartssbd/js/vendors/bootstrap.bundle.min.js</js>
+        <js>/assets/template-smartssbd/js/vendors/swiper-bundle.min.js</js>
+        <js>/assets/template-smartssbd/js/vendors/jquery.magnific-popup.min.js</js>
+        <js>/assets/template-smartssbd/js/vendors/parallax.min.js</js>
+        <js>/assets/template-smartssbd/js/vendors/aos.js</js>
+        <js>/assets/template-smartssbd/js/app.js</js>
+    </group>
+</resources>

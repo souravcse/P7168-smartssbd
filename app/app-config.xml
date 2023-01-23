@@ -1,0 +1,10 @@
+<!--Do not Delete This File, Route.php use this file-->
+<resources>
+    <modules dir="manages/access" priority="10" preRoutes="manage" status="1" />
+
+    <modules dir="frontend" priority="99" preRoutes="null" status="1" title="Frontend"/>
+
+    <modules dir="../packages/tools/defaults" priority="95" preRoutes="null" status="1" title="Defaults"/>
+    <modules dir="../packages/tools/develop" priority="96" preRoutes="develop" status="1" title="Develop"/>
+    <modules dir="system" priority="99" preRoutes="null" status="1" title="System"/>
+</resources>
