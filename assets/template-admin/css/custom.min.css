@@ -3,3 +3,6 @@
 .topbar-user{
     background-color: unset!important;
 }
+.page-content{
+    padding-top: calc(100px + .1rem)!important;
+}

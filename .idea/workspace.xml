@@ -6,15 +6,28 @@
   <component name="ChangeListManager">
     <list default="true" id="45dd7373-d3eb-4839-b9c6-1cd18d4e6fd6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/manages/TemplateHeader.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/TemplateHeader.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/manages/TemplateLeftSidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/TemplateLeftSidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/manages/access/controllers/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/access/controllers/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/manages/access/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/access/routes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/manages/access/views/login_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/access/views/login_html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/template-admin/css/app.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/template-admin/css/app.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/access/views/dashboard_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/access/views/dashboard_html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/controllers/OfficeAttendance.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/controllers/OfficeCalender.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/controllers/OfficeLeave.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/controllers/OfficeProfile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/controllers/OfficeReport.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/routes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/views/officeAttendance_list_html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/views/officeAttendance_today_html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/views/officeCalender_info_html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/views/officeLeave_approve_html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/views/officeLeave_list_html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/views/officeProfile_info_html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/views/officeReport_info_html.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/views/officeReport_info_print.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/template-admin/css/custom.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/template-admin/css/custom.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-admin/js/pages/dashboard-ecommerce.init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-admin/js/pages/modal.init.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/template-admin/js/pages/modal.init.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configs/assets/admin.assets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/assets/admin.assets.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/assets/smart.assets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/assets/smart.assets.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +98,7 @@
       <workItem from="1665830673990" duration="336000" />
       <workItem from="1665831028858" duration="716000" />
       <workItem from="1674471593656" duration="11970000" />
-      <workItem from="1674529821173" duration="3611000" />
+      <workItem from="1674529821173" duration="10999000" />
     </task>
     <servers />
   </component>

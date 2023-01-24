@@ -7,14 +7,14 @@ namespace App\manages;
 
 class TemplateHeader
 {
-    function getHtml()
+    function getHtml($title)
     {
         return "
             <header id=\"page-topbar\">
                 <div class=\"layout-width\">
                     <div class=\"navbar-header\">
                         <div class=\"d-flex\">
-                            <!-- LOGO -->
+                           $title
                         </div>
         
                         <div class=\"d-flex align-items-center\">
@@ -26,7 +26,7 @@ class TemplateHeader
                                                 <img class=\"rounded-circle header-profile-user\"
                                                      src=\"/assets/template-admin/images/users/avatar-1.jpg\" alt=\"Header Avatar\">
                                                 <span class=\"text-start ms-xl-2\">
-                                                    <span class=\"d-none d-xl-inline-block ms-1 fw-medium user-name-text\">Edward Diana</span>
+                                                    <span class=\"d-none d-xl-inline-block ms-1 fw-medium user-name-text\">".getUserInfoAr()['name']."</span>
                                                 </span>
                                             </span>
                                 </button>

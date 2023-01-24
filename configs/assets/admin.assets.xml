@@ -13,7 +13,7 @@
     <group name="bootstrap">
         <css>/assets/bootstrap-5.1.3/css/bootstrap.min.css</css>
         <!--        <css>/assets/bootstrap-5.1.3/css/floating-labels.css</css>-->
-        <js>/assets/bootstrap-5.1.3/js/bootstrap.bundle.js</js>
+        <js>/assets/template-admin/libs/bootstrap/js/bootstrap.bundle.min.js</js>
         <js>/assets/bootstrap-5.1.3/js/bootstrap.min.js</js>
     </group>
     <group name="flatpickr">
@@ -76,7 +76,6 @@
         <css>/assets/template-admin/css/app.min.css</css>
         <css>/assets/template-admin/css/custom.min.css</css>
 
-        <js>/assets/template-admin/libs/bootstrap/js/bootstrap.bundle.min.js</js>
         <js>/assets/template-admin/libs/simplebar/simplebar.min.js</js>
         <js>/assets/template-admin/js/pages/plugins/lord-icon-2.1.0.js</js>
         <js>/assets/template-admin/js/plugins.js</js>
@@ -84,7 +83,6 @@
         <js>/assets/template-admin/libs/jsvectormap/js/jsvectormap.min.js</js>
         <js>/assets/template-admin/libs/jsvectormap/maps/world-merc.js</js>
         <js>/assets/template-admin/libs/swiper/swiper-bundle.min.js</js>
-        <js>/assets/template-admin/js/pages/dashboard-ecommerce.init.js</js>
         <js>/assets/template-admin/js/app.js</js>
     </group>
 </resources>

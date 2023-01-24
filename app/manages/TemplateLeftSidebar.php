@@ -12,6 +12,8 @@ class TemplateLeftSidebar
 
     function getHtml(): string
     {
+        $acRoute = route()->getUriRoute();
+        //active
         return "
             <div class=\"app-menu navbar-menu\">
         <!-- LOGO -->
@@ -47,19 +49,19 @@ class TemplateLeftSidebar
 
                     <li class=\"menu-title\"><span data-key=\"t-menu\">Menu</span></li>
                     <li class=\"nav-item\">
-                        <a href=\"index.html\" class=\"nav-link menu-link\"> <i class=\"bi bi-speedometer2\"></i> <span
+                        <a href=\"" . mkUrl("manage/dashboard") . "\" class=\"nav-link menu-link " . ($acRoute == 'manage/dashboard' ? 'active' : '') . "\"> <i class=\"bi bi-speedometer2\"></i> <span
                                     data-key=\"t-dashboard\">Dashboard</span> </a>
                     </li>
                     <li class=\"nav-item\">
-                        <a href=\"index.html\" class=\"nav-link menu-link\"> <i class=\" ri-contacts-line\"></i> <span
+                        <a href=\"" . mkUrl("manage/client-list") . "\" class=\"nav-link menu-link " . ($acRoute == 'manage/client-list' ? 'active' : '') . "\"> <i class=\" ri-contacts-line\"></i> <span
                                     data-key=\"t-dashboard\">Client List</span> </a>
                     </li>
                      <li class=\"nav-item\">
-                        <a href=\"index.html\" class=\"nav-link menu-link\"> <i class=\"ri-pie-chart-line\"></i> <span
+                        <a href=\"" . mkUrl("manage/project-list") . "\" class=\"nav-link menu-link " . ($acRoute == 'manage/project-list' ? 'active' : '') . "\"> <i class=\"ri-pie-chart-line\"></i> <span
                                     data-key=\"t-dashboard\">Project List</span> </a>
                     </li>
                      <li class=\"nav-item\">
-                        <a href=\"index.html\" class=\"nav-link menu-link\"> <i class=\"ri-discuss-line\"></i> <span
+                        <a href=\"" . mkUrl("manage/message-list") . "\" class=\"nav-link menu-link " . ($acRoute == 'manage/message-list' ? 'active' : '') . "\"> <i class=\"ri-discuss-line\"></i> <span
                                     data-key=\"t-dashboard\">User Messages</span> </a>
                     </li>
                 </ul>

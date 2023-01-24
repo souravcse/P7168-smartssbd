@@ -1,38 +1,25 @@
 <resources>
 
-    <controller val="OfficeReport" pageTitle="Bikiran Attendance" validationToken="false" auth="false">
 
-        <route val="report" get="officeReportInfo"/>
+    <controller val="ManageMessage" pageTitle="Manage Message" validationToken="false" auth="true">
+
+        <route val="message-list" get="manageMessageList"/>
     </controller>
 
-    <controller val="OfficeCalender" pageTitle="Bikiran Attendance" validationToken="false" auth="false">
+    <controller val="ManageProject" pageTitle="Manage Project" validationToken="false" auth="true">
 
-        <route val="calendar/event-edit/{sl}/info/json" post="officeCalendarEventEditInfoJson"/>
-        <route val="calendar/event/{eventDate}/info/json" post="officeCalendarEventJson"/>
-        <route val="calendar/{sl}/calendar/update-event" post="officeCalendarEventUpdate"/>
-        <route val="calendar/create/holiday" post="officeCalendarHolidayCreate"/>
-        <route val="calendar" get="officeCalendarInfo"/>
+        <route val="project-list/{sl}/info/json" post="manageProjectInfoJson"/>
+        <route val="project-list/update" post="manageProjectUpdatePost"/>
+        <route val="project-list/create" post="manageProjectCreatePost"/>
+        <route val="project-list" get="manageProjectList"/>
     </controller>
 
-    <controller val="OfficeProfile" pageTitle="Bikiran Attendance" validationToken="false" auth="false">
+    <controller val="ManageClient" pageTitle="Manage Client" validationToken="false" auth="true">
 
-        <route val="profile/password/change" post="officeProfilePassword"/>
-        <route val="upload" post="officeUpload"/>
-        <route val="profile" get="officeProfileInfo" post="officeProfileInfoPost"/>
+        <route val="client-list/{sl}/info/json" post="manageClientInfoJson"/>
+        <route val="client-list/update" post="manageClientUpdatePost"/>
+        <route val="client-list/create" post="manageClientCreatePost"/>
+        <route val="client-list" get="manageClientList"/>
     </controller>
 
-    <controller val="OfficeLeave" pageTitle="Bikiran Attendance" validationToken="false" auth="false">
-
-        <route val="leave/approve" get="officeLeaveApprove" post="officeLeaveApprovePost"/>
-        <route val="leave/create" post="officeLeaveCreate"/>
-        <route val="leave/list" get="officeLeaveList"/>
-    </controller>
-
-    <controller val="OfficeAttendance" pageTitle="Bikiran Attendance" validationToken="false" auth="false">
-
-        <route val="attendance-update/out" post="officeAttendanceUpdateOut"/>
-        <route val="attendance-update" post="officeAttendanceUpdate"/>
-        <route val="attendance-today" get="officeAttendanceToday" post="manageAccountPost"/>
-        <route val="attendance-list" get="officeAttendanceList" post="manageAccountPost"/>
-    </controller>
 </resources>

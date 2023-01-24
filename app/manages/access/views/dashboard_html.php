@@ -29,7 +29,7 @@ $Footer = new TemplateFooter();
 <div id="layout-wrapper">
 
 
-    <?= $Header->getHtml() ?>
+    <?= $Header->getHtml("Dashboard") ?>
     <!-- ========== App Menu ========== -->
     <?= $Sidebar->getHtml() ?>
     <!-- Left Sidebar End -->
