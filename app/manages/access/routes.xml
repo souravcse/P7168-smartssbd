@@ -1,5 +1,5 @@
 <resources>
-    <controller val="DashBoard" pageTitle="Smart Solution For Software" validationToken="false" auth="false">
+    <controller val="DashBoard" pageTitle="Smart Solution For Software" validationToken="false" auth="true">
 
         <route val="dashboard/{month}/camp/json" post="dashBoardCampJson"/>
         <route val="dashboard/{status}/notification/json" post="dashBoardNtInfoJson"/>

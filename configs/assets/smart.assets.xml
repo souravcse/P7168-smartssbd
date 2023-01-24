@@ -3,8 +3,8 @@
         <css>/assets/normalize-8.0.1/normalize.css</css> <!--Supporting Library, Priority Top-->
         <css>/assets/animate/animate.css</css>
         <css>/assets/custom-switch/component-custom-switch.min.css</css>
+        <js>/assets/template-smartssbd/js/vendors/jquery-3.6.0.min.js</js>
 
-        <js>/assets/jquery-3.4.1/jquery-3.4.1.min.js</js>
         <js>https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js</js>
         <js>https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js</js>
     </group>
@@ -71,7 +71,6 @@
         <css>/assets/template-smartssbd/css/main.css</css>
         <css>/assets/template-smartssbd/css/custom.css</css>
 
-        <js>/assets/template-smartssbd/js/vendors/jquery-3.6.0.min.js</js>
         <js>/assets/template-smartssbd/js/vendors/bootstrap.bundle.min.js</js>
         <js>/assets/template-smartssbd/js/vendors/swiper-bundle.min.js</js>
         <js>/assets/template-smartssbd/js/vendors/jquery.magnific-popup.min.js</js>

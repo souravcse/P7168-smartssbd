@@ -34,7 +34,7 @@ $HeaderMeta = new HeaderMeta();
                                 <div class="col-sm-12">
                                     <label for="email" class="mb-1">Email <span class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
-                                        <input type="email" name="name" class="form-control" placeholder="Email" id="email" required aria-label="email">
+                                        <input type="email" name="email" class="form-control" placeholder="Email" id="email" required aria-label="email">
                                     </div>
                                 </div>
                                 <div class="col-sm-12">

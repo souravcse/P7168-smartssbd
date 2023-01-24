@@ -50,6 +50,18 @@ class TemplateLeftSidebar
                         <a href=\"index.html\" class=\"nav-link menu-link\"> <i class=\"bi bi-speedometer2\"></i> <span
                                     data-key=\"t-dashboard\">Dashboard</span> </a>
                     </li>
+                    <li class=\"nav-item\">
+                        <a href=\"index.html\" class=\"nav-link menu-link\"> <i class=\" ri-contacts-line\"></i> <span
+                                    data-key=\"t-dashboard\">Client List</span> </a>
+                    </li>
+                     <li class=\"nav-item\">
+                        <a href=\"index.html\" class=\"nav-link menu-link\"> <i class=\"ri-pie-chart-line\"></i> <span
+                                    data-key=\"t-dashboard\">Project List</span> </a>
+                    </li>
+                     <li class=\"nav-item\">
+                        <a href=\"index.html\" class=\"nav-link menu-link\"> <i class=\"ri-discuss-line\"></i> <span
+                                    data-key=\"t-dashboard\">User Messages</span> </a>
+                    </li>
                 </ul>
             </div>
             <!-- Sidebar -->

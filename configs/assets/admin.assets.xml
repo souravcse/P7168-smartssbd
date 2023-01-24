@@ -70,7 +70,7 @@
     <group name="template-admin">
         <css>/assets/template-admin/libs/jsvectormap/css/jsvectormap.min.css</css>
         <css>/assets/template-admin/libs/swiper/swiper-bundle.min.css</css>
-        <css>/assets/template-admin/js/layout.js</css>
+        <js>/assets/template-admin/js/layout.js</js>
         <css>/assets/template-admin/css/bootstrap.min.css</css>
         <css>/assets/template-admin/css/icons.min.css</css>
         <css>/assets/template-admin/css/app.min.css</css>

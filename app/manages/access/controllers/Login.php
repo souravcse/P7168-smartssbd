@@ -123,12 +123,7 @@ class Login
         $getUrl_ar = $this->getUrl($Info_ar, $_GET['url']);
         $url = $getUrl_ar['url'];
         $User = $getUrl_ar['User'];
-        if ($User->getError()==0){
-            $ipDetail = json_decode(json_encode(IpDetail::getIpDetail()),true);
-            if ($ipDetail['org'] == 'AS140664 Cogent Broadband') {
-                ModelAttendance::makeAttendance($Info_ar['sl']);
-            }
-        }
+
         return json_encode([
             'error' => $User->getError(),
             'message' => $User->getMessage(),
