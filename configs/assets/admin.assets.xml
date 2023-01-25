@@ -40,6 +40,8 @@
     <group name="jquery-ui">
         <css>/assets/jquery-ui-1.12.1/jquery-ui.min.css</css>
         <js>/assets/jquery-ui-1.12.1/jquery-ui.min.js</js>
+        <js>/assets/simple-upload-1.1/simpleUpload.min.js</js>
+
     </group>
 
     <group name="date-picker">

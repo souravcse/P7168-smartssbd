@@ -1,6 +1,11 @@
 <resources>
 
 
+    <controller val="ManageConfig" pageTitle="Manage Message" validationToken="false" auth="true">
+
+        <route val="config" get="manageConfigInfo" post="manageConfigInfoPost"/>
+    </controller>
+
     <controller val="ManageMessage" pageTitle="Manage Message" validationToken="false" auth="true">
 
         <route val="message-list" get="manageMessageList"/>
@@ -8,8 +13,9 @@
 
     <controller val="ManageProject" pageTitle="Manage Project" validationToken="false" auth="true">
 
+        <route val="project-list/{sl}/remove" post="manageProjectRemovePost"/>
         <route val="project-list/{sl}/info/json" post="manageProjectInfoJson"/>
-        <route val="project-list/update" post="manageProjectUpdatePost"/>
+        <route val="project-list/{sl}/update" post="manageProjectUpdatePost"/>
         <route val="project-list/create" post="manageProjectCreatePost"/>
         <route val="project-list" get="manageProjectList"/>
     </controller>
@@ -17,7 +23,8 @@
     <controller val="ManageClient" pageTitle="Manage Client" validationToken="false" auth="true">
 
         <route val="client-list/{sl}/info/json" post="manageClientInfoJson"/>
-        <route val="client-list/update" post="manageClientUpdatePost"/>
+        <route val="client-list/{sl}/remove" post="manageClientRemovePost"/>
+        <route val="client-list/{sl}/update" post="manageClientUpdatePost"/>
         <route val="client-list/create" post="manageClientCreatePost"/>
         <route val="client-list" get="manageClientList"/>
     </controller>

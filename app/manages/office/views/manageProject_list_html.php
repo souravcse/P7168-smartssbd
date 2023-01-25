@@ -10,6 +10,32 @@ $Header = new TemplateHeader();
 $Sidebar = new TemplateLeftSidebar();
 $Footer = new TemplateFooter();
 
+/** @var array $projectInfo_all_ar */
+
+$tr = "";
+$sl = 1;
+foreach ($projectInfo_all_ar as $det_ar) {
+    $tr .= "<tr> 
+            <td>" . $sl++ . "</td>
+            <td>" . $det_ar['title'] . "</td>
+            <td>" . $det_ar['description'] . "</td>
+            <td><a href=\"" . $det_ar['demo_url'] . "\" target=\"_blank\"> " . $det_ar['demo_url'] . "</a></td>
+            <td>" . $det_ar['status'] . "</td>
+            <td> 
+                <div class=\"d-flex gap-2\">
+                    <div class=\"edit\">
+                        <button class=\"btn btn-sm btn-success edit-btn\" data-id=\"" . $det_ar['sl'] . "\">
+                            Edit
+                            </button>
+                    </div>
+                    <div class=\"remove\">
+                        <button class=\"btn btn-sm btn-danger remove-btn\" data-id=\"" . $det_ar['sl'] . "\">Remove
+                        </button>
+                    </div>
+                </div>
+            </td>
+        </tr>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,10 +61,7 @@ $Footer = new TemplateFooter();
     <!-- Left Sidebar End -->
     <!-- Vertical Overlay-->
     <div class="vertical-overlay"></div>
-
-    <!-- ============================================================== -->
-    <!-- Start right Content here -->
-    <!-- ============================================================== -->
+    <!-- start main content-->
     <div class="main-content">
 
         <div class="page-content">
@@ -62,9 +85,7 @@ $Footer = new TemplateFooter();
                                         </div>
                                         <div class="col-sm-auto">
                                             <button type="button" class="btn btn-success add-btn"
-                                                    data-bs-toggle="modal" id="create-btn"
-                                                    data-bs-target="#showModal"><i
-                                                        class="ri-add-line align-bottom me-1"></i> Add
+                                                    id="create-btn"><i class="ri-add-line align-bottom me-1"></i> Add
                                             </button>
                                         </div>
                                     </div>
@@ -73,82 +94,18 @@ $Footer = new TemplateFooter();
                                         <table class="table align-middle table-nowrap" id="customerTable">
                                             <thead class="table-light">
                                             <tr>
-                                                <th scope="col" style="width: 50px;">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="checkAll"
-                                                               value="option">
-                                                    </div>
-                                                </th>
-                                                <th class="sort" data-sort="customer_name">Customer</th>
-                                                <th class="sort" data-sort="email">Email</th>
-                                                <th class="sort" data-sort="phone">Phone</th>
-                                                <th class="sort" data-sort="date">Joining Date</th>
-                                                <th class="sort" data-sort="status">Delivery Status</th>
-                                                <th class="sort" data-sort="action">Action</th>
+                                                <th>SL</th>
+                                                <th>Title</th>
+                                                <th>Description</th>
+                                                <th>Demo Link</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
                                             </tr>
                                             </thead>
                                             <tbody class="list form-check-all">
-                                            <tr>
-                                                <th scope="row">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" name="chk_child"
-                                                               value="option1">
-                                                    </div>
-                                                </th>
-                                                <td class="id" style="display:none;"><a href="javascript:void(0);"
-                                                                                        class="fw-medium link-primary">#VZ2101</a>
-                                                </td>
-                                                <td class="customer_name">Mary Cousar</td>
-                                                <td class="email">marycousar@Hybrix.com</td>
-                                                <td class="phone">580-464-4694</td>
-                                                <td class="date">06 Apr, 2021</td>
-                                                <td class="status"><span
-                                                            class="badge badge-soft-success text-uppercase">Active</span>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex gap-2">
-                                                        <div class="edit">
-                                                            <button class="btn btn-sm btn-success edit-item-btn"
-                                                                    data-bs-toggle="modal" data-bs-target="#showModal">
-                                                                Edit
-                                                            </button>
-                                                        </div>
-                                                        <div class="remove">
-                                                            <button class="btn btn-sm btn-danger remove-item-btn"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#deleteRecordModal">Remove
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                            <?= $tr ?>
                                             </tbody>
                                         </table>
-                                        <div class="noresult" style="display: none">
-                                            <div class="text-center">
-                                                <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop"
-                                                           colors="primary:#121331,secondary:#08a88a"
-                                                           style="width:75px;height:75px"></lord-icon>
-                                                <h5 class="mt-2">Sorry! No Result Found</h5>
-                                                <p class="text-muted mb-0">We've searched more than 150+ Orders We did
-                                                    not find any orders for you search.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex justify-content-end">
-                                        <div class="pagination-wrap hstack gap-2">
-                                            <a class="page-item pagination-prev disabled" href="#">
-                                                Previous
-                                            </a>
-                                            <ul class="pagination listjs-pagination mb-0">
-                                                <li class="active"><a class="page" href="#" data-i="1"
-                                                                      data-page="8">1</a></li>
-                                            </ul>
-                                            <a class="page-item pagination-next" href="#">
-                                                Next
-                                            </a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -158,11 +115,11 @@ $Footer = new TemplateFooter();
             </div>
             <!-- container-fluid -->
         </div>
-
+        <!-- End Page-content -->
 
         <div>
             <button type="button" class="btn-success btn-rounded shadow-lg btn btn-icon layout-rightside-btn fs-22"><i
-                    class="ri-chat-smile-2-line"></i></button>
+                        class="ri-chat-smile-2-line"></i></button>
         </div>
         <?= $Footer->getHtml() ?>
     </div>
@@ -171,13 +128,171 @@ $Footer = new TemplateFooter();
 </div>
 <!-- END layout-wrapper -->
 
+<div class="modal" tabindex="-1" id="projectModal">
+    <div class="modal-dialog">
+        <form class="modal-content" action="" method="post" id="form">
+            <div class="modal-header">
+                <h5 class="modal-title">x</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Name</label>
+                            <input type="text" class="form-control" name="title" placeholder="Enter Client Name"
+                                   id="title">
+                        </div>
+                    </div><!--end col-->
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <input type="text" class="form-control" name="description" placeholder="Enter Description"
+                                   id="description">
+                        </div>
+                    </div><!--end col-->
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="demo_url" class="form-label">Demo Link</label>
+                            <input type="tel" class="form-control" name="demo_url" placeholder="Enter Demo Link"
+                                   id="demo_url">
+                        </div>
+                    </div><!--end col-->
+
+                </div><!--end row-->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="removeModal" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content" action="" method="post" id="removeForm">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="NotificationModalbtn-close"></button>
+            </div>
+            <div class="modal-body p-md-5">
+                <div class="text-center">
+                    <div class="text-danger">
+                        <i class="bi bi-trash display-4"></i>
+                    </div>
+                    <div class="mt-4 fs-15">
+                        <h4 class="mb-1">Are you sure ?</h4>
+                        <p class="text-muted mx-4 mb-0">Are you sure you want to remove this Notification ?</p>
+                    </div>
+                </div>
+                <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+                    <button type="button" class="btn w-sm btn-light" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn w-sm btn-danger" id="delete-notification">Yes, Delete It!</button>
+                </div>
+            </div>
+
+        </form><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <!--start back-to-top-->
 <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
     <i class="ri-arrow-up-line"></i>
 </button>
-<?= assetsJs('admin') ?>
 
+<?= assetsJs('admin') ?>
+<script>
+    $('#create-btn').on('click', function () {
+        let $modal = $('#projectModal').modal('show');
+        let $title = $modal.find('.modal-title');
+        let $form = $modal.find('form');
+
+        $title.html('Add New Client');
+        $form.trigger('reset').attr('action', '<?= mkUrl("manage/project-list/create") ?>').attr('data-mode', 'create');
+
+        return false;
+    });
+    $('.edit-btn').on('click', function () {
+        let $modal = $('#projectModal').modal('show');
+        let $title = $modal.find('.modal-title');
+        let $form = $modal.find('form');
+        let id = $(this).attr('data-id');
+
+        $title.html('Edit Client');
+        $form.trigger('reset').attr('action', '<?= mkUrl("manage/project-list/{sl}/update", ['sl' => "' + id + '"]) ?>').attr('data-mode', 'update');
+
+        $.post('<?= mkUrl("manage/project-list/{sl}/info/json", ['sl' => "' + id + '"]) ?>', function (data) {
+            $('#title').val(data['title']);
+            $('#description').val(data['description']);
+            $('#demo_url').val(data['demo_url']);
+
+        }, "json");
+
+        return false;
+    });
+    $('.remove-btn').on('click', function () {
+        let $modal = $('#removeModal').modal('show');
+        let $title = $modal.find('.modal-title');
+        let $form = $modal.find('form');
+        let id = $(this).attr('data-id');
+
+        $title.html('Edit Client');
+        $form.trigger('reset').attr('action', '<?= mkUrl("manage/project-list/{sl}/remove", ['sl' => "' + id + '"]) ?>').attr('data-mode', 'update');
+
+        return false;
+    });
+    //Images
+    $('#image_url').on('change', function () {
+        if ($(this).val()) {
+            $('#image_url_preview').html("<img src=\"" + $(this).val() + "\" alt=\"\" width=\"100%\" />");
+        } else {
+            $('#image_url_preview').html("");
+        }
+    }).change();
+
+    $('#btnPickImage').on('click', function () {
+        $('#PickImage').modal('show');
+        $('#queryImage').change();
+    });
+
+    let $showImages = $('#showImages');
+    let innerHtml = $showImages.html();
+    $('#queryImage').on('change', function () {
+        $.post('<?= mkUrl("manage/image/search-result") ?>', {key: $(this).val()}, function (data) {
+            //console.log(data);
+            $showImages.html("");
+
+            $.each(data, function (i, item) {
+                $showImages.append("<img src=\"" + item.image + "\" alt=\"\" class=\"image-thumb-150x100\" />");
+            })
+        }, "json");
+    });
+
+
+    $(document).on('click', '#showImages img', function (e) {
+        let $this = $(this);
+
+        $('#image_url').val($this.attr('src')).change();
+        $('#PickImage').modal('hide');
+    });
+
+    $('#btnUploadFile').on('click', function () {
+        $('#inpUploadFile').click();
+    });
+
+    $('#inpUploadFile').change(function () {
+        $(this).ajaxFileUpload("<?= mkUrl("upload/image") ?>");
+    });
+
+    $('#btnCancelFile').on('click', function () {
+        console.log("OK");
+        $('#image_url').val('').change();
+    })
+
+    $('#form').ajaxFormOnSubmit();
+    $('#removeForm').ajaxFormOnSubmit();
+
+</script>
 </body>
 
 </html>

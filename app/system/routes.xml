@@ -2,6 +2,7 @@
 
     <controller val="System" pageTitle="Smart Solution For Software" validationToken="false" auth="false">
 
+        <route val="upload/image" post="uploadImage"/>
         <route val="home" get="index"/>
         <route val="/" get="index2"/>
     </controller>

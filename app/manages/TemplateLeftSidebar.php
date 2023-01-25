@@ -64,6 +64,10 @@ class TemplateLeftSidebar
                         <a href=\"" . mkUrl("manage/message-list") . "\" class=\"nav-link menu-link " . ($acRoute == 'manage/message-list' ? 'active' : '') . "\"> <i class=\"ri-discuss-line\"></i> <span
                                     data-key=\"t-dashboard\">User Messages</span> </a>
                     </li>
+                    <li class=\"nav-item\">
+                        <a href=\"" . mkUrl("manage/config") . "\" class=\"nav-link menu-link " . ($acRoute == 'manage/config' ? 'active' : '') . "\"> <i class=\"ri-discuss-line\"></i> <span
+                                    data-key=\"t-dashboard\">Config</span> </a>
+                    </li>
                 </ul>
             </div>
             <!-- Sidebar -->
