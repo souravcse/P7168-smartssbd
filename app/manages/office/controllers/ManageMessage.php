@@ -8,9 +8,9 @@ class ManageMessage
 {
     function manageMessageList()
     {
-        $select = new QuerySelect("system_users");
+        $select = new QuerySelect("user_message");
         $select->setQueryString("
-        SELECT * FROM `system_users` 
+        SELECT * FROM `user_message` 
         WHERE 1
         ");
         $select->pull();

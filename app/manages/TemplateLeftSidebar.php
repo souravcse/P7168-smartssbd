@@ -61,6 +61,10 @@ class TemplateLeftSidebar
                                     data-key=\"t-dashboard\">Project List</span> </a>
                     </li>
                      <li class=\"nav-item\">
+                        <a href=\"" . mkUrl("manage/service-list") . "\" class=\"nav-link menu-link " . ($acRoute == 'manage/service-list' ? 'active' : '') . "\"> <i class=\"ri-pie-chart-line\"></i> <span
+                                    data-key=\"t-dashboard\">Services List</span> </a>
+                    </li>
+                     <li class=\"nav-item\">
                         <a href=\"" . mkUrl("manage/message-list") . "\" class=\"nav-link menu-link " . ($acRoute == 'manage/message-list' ? 'active' : '') . "\"> <i class=\"ri-discuss-line\"></i> <span
                                     data-key=\"t-dashboard\">User Messages</span> </a>
                     </li>

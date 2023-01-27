@@ -6,15 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="45dd7373-d3eb-4839-b9c6-1cd18d4e6fd6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelFooter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelFooter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelHeader.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelHeader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/routes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/manages/TemplateLeftSidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/TemplateLeftSidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/manages/office/controllers/ManageClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/controllers/ManageClient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/controllers/ManageConfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/controllers/ManageConfig.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/controllers/ManageMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/controllers/ManageMessage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/manages/office/controllers/ManageProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/controllers/ManageProject.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/manages/office/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/routes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/manages/office/views/manageClient_list_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/views/manageClient_list_html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/manages/office/views/manageProject_list_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/views/manageProject_list_html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/system/controllers/System.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/system/controllers/System.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/system/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/system/routes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/assets/admin.assets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configs/assets/admin.assets.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/views/manageConfig_info_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/views/manageConfig_info_html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/views/manageMessage_list_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/views/manageMessage_list_html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-smartssbd/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/template-smartssbd/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-smartssbd/css/main.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,22 +57,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/xampp/htdocs/P7168-smartssbd/assets/template-smartssbd/img&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "G:/xampp/htdocs/P7168-smartssbd/app/frontend/views",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\xampp\htdocs\P7168-smartssbd\app\frontend\views" />
       <recent name="G:\xampp\htdocs\P7168-smartssbd\assets\template-smartssbd\img" />
+      <recent name="G:\xampp\htdocs\P7168-smartssbd\assets\template-smartssbd\css" />
       <recent name="G:\xampp\htdocs\P7168-smartssbd\app" />
       <recent name="G:\xampp\htdocs\P7168-smartssbd" />
     </key>
@@ -87,6 +93,7 @@
       <workItem from="1674471593656" duration="11970000" />
       <workItem from="1674529821173" duration="10999000" />
       <workItem from="1674572501442" duration="8317000" />
+      <workItem from="1674828039514" duration="9449000" />
     </task>
     <servers />
   </component>

@@ -11,6 +11,15 @@
         <route val="message-list" get="manageMessageList"/>
     </controller>
 
+    <controller val="ManageServices" pageTitle="Manage Project" validationToken="false" auth="true">
+
+        <route val="service-list/{sl}/remove" post="manageServiceRemovePost"/>
+        <route val="service-list/{sl}/info/json" post="manageServiceInfoJson"/>
+        <route val="service-list/{sl}/update" post="manageServiceUpdatePost"/>
+        <route val="service-list/create" post="manageServiceCreatePost"/>
+        <route val="service-list" get="manageServiceList"/>
+    </controller>
+
     <controller val="ManageProject" pageTitle="Manage Project" validationToken="false" auth="true">
 
         <route val="project-list/{sl}/remove" post="manageProjectRemovePost"/>

@@ -8,40 +8,40 @@ use Packages\mysql\QueryInsert;
 use Packages\mysql\QuerySelect;
 use Packages\mysql\QueryUpdate;
 
-class ManageProject
+class ManageServices
 {
-    function manageProjectList()
+    function manageServiceList()
     {
-        $select = new QuerySelect("project_list");
+        $select = new QuerySelect("service_list");
         $select->setQueryString("
-        SELECT * FROM `project_list` 
+        SELECT * FROM `service_list` 
         WHERE 1
         ");
         $select->pull();
         $projectInfo_all_ar = $select->getRows();
 
-        return view("manageProject_list_html.php",[
+        return view("manageService_list_html.php",[
             'projectInfo_all_ar'=>$projectInfo_all_ar
         ]);
     }
-    function manageProjectCreatePost()
+    function manageServiceCreatePost()
     {
 
         $validation = new Validation();
         $validation->chkString("title", "Title");
         $validation->chkString("description", "Description");
-        $validation->chkString("demo_url", "Demo Link");
 
         $validation->validate();
 
         if ($validation->getStatus()) {
+            $FileSave = new FileSave($_POST['image_url'], 'service/');
 
             //--Insert
-            $insert = new QueryInsert('project_list');
+            $insert = new QueryInsert('service_list');
             $insert->addRow([
                 'title' => $_POST['title'],
                 'description' => $_POST['description'],
-                'demo_url' => $_POST['demo_url'],
+                'icon_url' => $FileSave->getNewUrl(),
                 'status' => 'active',
             ]);
             $insert->push();
@@ -68,49 +68,49 @@ class ManageProject
             'do' => $do,
         ]);
     }
-    function manageProjectInfoJson()
+    function manageServiceInfoJson()
     {
         $sl = route()->getUriVariablesAr()['sl'];
 
-        $select = new QuerySelect("project_list");
+        $select = new QuerySelect("service_list");
         $select->setQueryString("
-        SELECT * FROM `project_list` 
+        SELECT * FROM `service_list` 
         WHERE `sl`=" . quote($sl) . "
         ");
         $select->pull();
-        $projectInfoAr = $select->getRow();
+        $serviceInfoAr = $select->getRow();
 
-        return json_encode($projectInfoAr);
+        return json_encode($serviceInfoAr);
     }
-    function manageProjectUpdatePost()
+    function manageServiceUpdatePost()
     {
         $sl = route()->getUriVariablesAr()['sl'];
 
-        $select = new QuerySelect("project_list");
+        $select = new QuerySelect("service_list");
         $select->setQueryString("
-        SELECT * FROM `project_list` 
+        SELECT * FROM `service_list` 
         WHERE `sl`=" . quote($sl) . "
         ");
         $select->pull();
-        $projectInfoAr = $select->getRow();
+        $serviceInfoAr = $select->getRow();
 
-        $_POST['project_sl'] = $projectInfoAr['sl'];
+        $_POST['service_sl'] = $serviceInfoAr['sl'];
 
         $validation = new Validation();
-        $validation->chkTrue("project_sl", "Client Not Found");
+        $validation->chkTrue("service_sl", "Service Not Found");
         $validation->chkString("title", "Title");
         $validation->chkString("description", "Description");
-        $validation->chkString("demo_url", "Demo Link");
         $validation->validate();
 
         if ($validation->getStatus()) {
+            $FileSave = new FileSave($_POST['image_url'], 'service/');
+
             //--Update
-            $update = new QueryUpdate('project_list');
-            $update->updateRow($projectInfoAr, [
-                'client_sl' => $_POST['client_sl'],
+            $update = new QueryUpdate('service_list');
+            $update->updateRow($serviceInfoAr, [
                 'title' => $_POST['title'],
                 'description' => $_POST['description'],
-                'demo_url' => $_POST['demo_url'],
+                'icon_url' => $FileSave->getNewUrl(),
             ]);
             $update->push();
 
@@ -136,28 +136,28 @@ class ManageProject
             'do' => $do,
         ]);
     }
-    function manageProjectRemovePost()
+    function manageServiceRemovePost()
     {
         $sl = route()->getUriVariablesAr()['sl'];
 
-        $select = new QuerySelect("project_list");
+        $select = new QuerySelect("service_list");
         $select->setQueryString("
-        SELECT * FROM `project_list` 
+        SELECT * FROM `service_list` 
         WHERE `sl`=" . quote($sl) . "
         ");
         $select->pull();
-        $projectInfoAr = $select->getRow();
+        $serviceInfoAr = $select->getRow();
 
-        $_POST['project_sl'] = $projectInfoAr['sl'];
+        $_POST['service_sl'] = $serviceInfoAr['sl'];
 
         $validation = new Validation();
-        $validation->chkTrue("project_sl", "Project Not Found");
+        $validation->chkTrue("service_sl", "Service Not Found");
         $validation->validate();
 
         if ($validation->getStatus()) {
             //--Update
-            $update = new QueryUpdate('project_list');
-            $update->updateRow($projectInfoAr, [
+            $update = new QueryUpdate('service_list');
+            $update->updateRow($serviceInfoAr, [
                 'time_deleted' => getTime(),
             ]);
             $update->push();

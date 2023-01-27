@@ -1,8 +1,9 @@
 <resources>
 
-    <controller val="Pages" pageTitle="About Us" validationToken="false" auth="false">
+    <controller val="Pages" pageTitle="Contact Us" validationToken="false" auth="false">
 
-        <route val="profile/academic" get="profilePageAcademic"/>
-        <route val="about-us" get="aboutPage"/>
+        <route val="services" get="servicesPageInfo" pageTitle="services"/>
+        <route val="about-us" get="aboutPageInfo" pageTitle="About Us"/>
+        <route val="contact-us" get="contactPageInfo" post="contactPageInfoPost" pageTitle="Contact Us"/>
     </controller>
 </resources>

@@ -14,27 +14,11 @@ class ModelFooter
                 <div class=\"row justify-content-between\">
                     <div class=\"col-md-8 col-lg-4 mb-md-4 mb-lg-0\">
                         <div class=\"footer-single-col\">
-                            <div class=\"footer-single-col mb-4\">
-                                <img src=\"/assets/template-smartssbd/img/logo-white.png\" alt=\"logo\" class=\"img-fluid logo-white\">
-                                <img src=\"/assets/template-smartssbd/img/logo-color.png\" alt=\"logo\" class=\"img-fluid logo-color\">
-                            </div>
+                           
                             <p>Our latest news, articles, and resources, we will sent to
                                 your inbox weekly.</p>
 
-                            <form class=\"newsletter-form position-relative d-block d-lg-flex d-md-flex\">
-                                <input type=\"text\" class=\"input-newsletter form-control me-2\" placeholder=\"Enter your email\" name=\"email\" required=\"\" autocomplete=\"off\">
-                                <input type=\"submit\" value=\"Subscribe\" data-wait=\"Please wait...\" class=\"btn btn-primary mt-3 mt-lg-0 mt-md-0\">
-                            </form>
-                            <div class=\"ratting-wrap mt-4\">
-                                <h6 class=\"mb-0\">10/10 Overall rating</h6>
-                                <ul class=\"list-unstyled rating-list list-inline mb-0\">
-                                    <li class=\"list-inline-item\"><i class=\"fas fa-star text-warning\"></i></li>
-                                    <li class=\"list-inline-item\"><i class=\"fas fa-star text-warning\"></i></li>
-                                    <li class=\"list-inline-item\"><i class=\"fas fa-star text-warning\"></i></li>
-                                    <li class=\"list-inline-item\"><i class=\"fas fa-star text-warning\"></i></li>
-                                    <li class=\"list-inline-item\"><i class=\"fas fa-star text-warning\"></i></li>
-                                </ul>
-                            </div>
+                           
                         </div>
                     </div>
                     <div class=\"col-md-12 col-lg-7 mt-4 mt-md-0 mt-lg-0\">

@@ -10,7 +10,7 @@ $Header = new TemplateHeader();
 $Sidebar = new TemplateLeftSidebar();
 $Footer = new TemplateFooter();
 
-/** @var array $projectInfo_all_ar */
+/** @var array $config_all_ar */
 
 
 ?>
@@ -47,10 +47,67 @@ $Footer = new TemplateFooter();
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <div id="customerList">
-
-
-                                </div>
+                                <form class="row" action="" method="post" id="form">
+                                    <div class="col-6 mb-3">
+                                        <label for="fbInp" class="form-label">Facebook Page</label>
+                                        <input type="text" class="form-control" placeholder="Facebook Page" id="fbInp" value="<?=$config_all_ar['fbInp']['value']?>" name="fbInp">
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label for="twittInp" class="form-label">Twitter Page</label>
+                                        <input type="text" class="form-control" placeholder="Twitter Page"
+                                               id="twittInp" value="<?=$config_all_ar['twittInp']['value']?>" name="twittInp">
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label for="linkInp" class="form-label">LinkedIn Page</label>
+                                        <input type="text" class="form-control" placeholder="LinkedIn Page"
+                                               id="linkInp" value="<?=$config_all_ar['linkInp']['value']?>" name="linkInp">
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label for="instaInp" class="form-label">Instagram Page</label>
+                                        <input type="text" class="form-control" placeholder="Instagram Page"
+                                               id="instaInp" value="<?=$config_all_ar['instaInp']['value']?>" name="instaInp">
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label for="emailInp" class="form-label">Email</label>
+                                        <input type="text" class="form-control" placeholder="Email" id="emailInp" value="<?=$config_all_ar['emailInp']['value']?>" name="emailInp">
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label for="contactInp" class="form-label">Contact Number</label>
+                                        <input type="text" class="form-control" placeholder="Contact Number"
+                                               id="contactInp" value="<?=$config_all_ar['contactInp']['value']?>" name="contactInp">
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label for="faxInp" class="form-label">Fax Number</label>
+                                        <input type="text" class="form-control" placeholder="Fax Number" id="faxInp" value="<?=$config_all_ar['faxInp']['value']?>" name="faxInp">
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label for="addressInp" class="form-label">Address</label>
+                                        <textarea class="form-control" placeholder="Instagram Page"
+                                                  id="addressInp" name="addressInp"><?=$config_all_ar['addressInp']['value']?></textarea>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label for="heroTitleInp" class="form-label">Hero Title</label>
+                                        <input type="text" class="form-control" placeholder="Hero Title" id="heroTitleInp" value="<?=$config_all_ar['heroTitleInp']['value']?>" name="heroTitleInp">
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label for="heroDetail" class="form-label">Hero Detail</label>
+                                        <textarea class="form-control" placeholder="Hero Detail"
+                                                  id="heroDetail" name="heroDetail"><?=$config_all_ar['heroDetail']['value']?></textarea>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="aboutDetail" class="form-label">About Us Detail</label>
+                                        <textarea class="form-control" placeholder="About Us Detail"
+                                                  id="aboutDetail" name="aboutDetail"><?=$config_all_ar['aboutDetail']['value']?></textarea>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="contactDetail" class="form-label">Contact Us Detail</label>
+                                        <textarea class="form-control" placeholder="Contact Us Detail"
+                                                  id="contactDetail" name="contactDetail"><?=$config_all_ar['contactDetail']['value']?></textarea>
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -62,7 +119,7 @@ $Footer = new TemplateFooter();
 
         <div>
             <button type="button" class="btn-success btn-rounded shadow-lg btn btn-icon layout-rightside-btn fs-22"><i
-                    class="ri-chat-smile-2-line"></i></button>
+                        class="ri-chat-smile-2-line"></i></button>
         </div>
         <?= $Footer->getHtml() ?>
     </div>
@@ -78,92 +135,6 @@ $Footer = new TemplateFooter();
 
 <?= assetsJs('admin') ?>
 <script>
-    $('#create-btn').on('click', function () {
-        let $modal = $('#projectModal').modal('show');
-        let $title = $modal.find('.modal-title');
-        let $form = $modal.find('form');
-
-        $title.html('Add New Client');
-        $form.trigger('reset').attr('action', '<?= mkUrl("manage/project-list/create") ?>').attr('data-mode', 'create');
-
-        return false;
-    });
-    $('.edit-btn').on('click', function () {
-        let $modal = $('#projectModal').modal('show');
-        let $title = $modal.find('.modal-title');
-        let $form = $modal.find('form');
-        let id = $(this).attr('data-id');
-
-        $title.html('Edit Client');
-        $form.trigger('reset').attr('action', '<?= mkUrl("manage/project-list/{sl}/update", ['sl' => "' + id + '"]) ?>').attr('data-mode', 'update');
-
-        $.post('<?= mkUrl("manage/project-list/{sl}/info/json", ['sl' => "' + id + '"]) ?>', function (data) {
-            $('#title').val(data['title']);
-            $('#description').val(data['description']);
-            $('#demo_url').val(data['demo_url']);
-
-        }, "json");
-
-        return false;
-    });
-    $('.remove-btn').on('click', function () {
-        let $modal = $('#removeModal').modal('show');
-        let $title = $modal.find('.modal-title');
-        let $form = $modal.find('form');
-        let id = $(this).attr('data-id');
-
-        $title.html('Edit Client');
-        $form.trigger('reset').attr('action', '<?= mkUrl("manage/project-list/{sl}/remove", ['sl' => "' + id + '"]) ?>').attr('data-mode', 'update');
-
-        return false;
-    });
-    //Images
-    $('#image_url').on('change', function () {
-        if ($(this).val()) {
-            $('#image_url_preview').html("<img src=\"" + $(this).val() + "\" alt=\"\" width=\"100%\" />");
-        } else {
-            $('#image_url_preview').html("");
-        }
-    }).change();
-
-    $('#btnPickImage').on('click', function () {
-        $('#PickImage').modal('show');
-        $('#queryImage').change();
-    });
-
-    let $showImages = $('#showImages');
-    let innerHtml = $showImages.html();
-    $('#queryImage').on('change', function () {
-        $.post('<?= mkUrl("manage/image/search-result") ?>', {key: $(this).val()}, function (data) {
-            //console.log(data);
-            $showImages.html("");
-
-            $.each(data, function (i, item) {
-                $showImages.append("<img src=\"" + item.image + "\" alt=\"\" class=\"image-thumb-150x100\" />");
-            })
-        }, "json");
-    });
-
-
-    $(document).on('click', '#showImages img', function (e) {
-        let $this = $(this);
-
-        $('#image_url').val($this.attr('src')).change();
-        $('#PickImage').modal('hide');
-    });
-
-    $('#btnUploadFile').on('click', function () {
-        $('#inpUploadFile').click();
-    });
-
-    $('#inpUploadFile').change(function () {
-        $(this).ajaxFileUpload("<?= mkUrl("upload/image") ?>");
-    });
-
-    $('#btnCancelFile').on('click', function () {
-        console.log("OK");
-        $('#image_url').val('').change();
-    })
 
     $('#form').ajaxFormOnSubmit();
     $('#removeForm').ajaxFormOnSubmit();
