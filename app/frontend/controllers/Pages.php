@@ -4,13 +4,25 @@ namespace App\frontend\controllers;
 
 use Packages\bikiran\Validation;
 use Packages\mysql\QueryInsert;
+use Packages\mysql\QuerySelect;
 
 class Pages
 {
     function contactPageInfo(): string
     {
-        return view("contactPage_info_html.php");
+        $select = new QuerySelect("site_config");
+        $select->setQueryString("
+        SELECT * FROM `site_config` 
+        WHERE 1
+        ");
+        $select->pull();
+        $configInfo_ar = $select->getRows('type');
+
+        return view("contactPage_info_html.php", [
+            'configInfo_ar' => $configInfo_ar
+        ]);
     }
+
     function contactPageInfoPost()
     {
 //        dd($_POST);
@@ -58,11 +70,37 @@ class Pages
 
     function aboutPageInfo(): string
     {
-        return view("aboutPage_info_html.php");
+        $select = new QuerySelect("site_config");
+        $select->setQueryString("
+        SELECT * FROM `site_config` 
+        WHERE 1
+        ");
+        $select->pull();
+        $configInfo_ar = $select->getRows('type');
+
+        return view("aboutPage_info_html.php", [
+            'configInfo_ar' => $configInfo_ar
+        ]);
     }
+
     function servicesPageInfo(): string
     {
-        return view("servicePage_info_html.php");
+        $select = new QuerySelect("service_list");
+        $select->setQueryString("
+        SELECT * FROM `service_list` 
+        WHERE 1
+        ");
+        $select->pull();
+        $projectInfo_all_ar = $select->getRows();
+
+        return view("servicePage_info_html.php", [
+            'projectInfo_all_ar' => $projectInfo_all_ar
+        ]);
+    }
+
+    function pricingPageInfo(): string
+    {
+        return view("pricingPage_info_html.php");
     }
 
 }

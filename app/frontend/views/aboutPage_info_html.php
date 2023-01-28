@@ -21,6 +21,9 @@ $CustomerReviewSection = new ModelCustomerReview();
 $FeatureSection = new ModelFeature();
 $WhyChooseSection = new ModelWhyChoose();
 $SubscribeSection = new ModelSubscribe();
+
+/** @var array $configInfo_ar */
+
 ?>
 
 
@@ -52,8 +55,9 @@ $SubscribeSection = new ModelSubscribe();
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <h1 class="display-5 fw-bold">About Us</h1>
-                    <p class="lead">Seamlessly actualize client-based users after out-of-the-box value data through
-                        frictionless expertise.</p>
+                    <p class="lead">A software company's about page provides information about the company's history,
+                        mission, values, and services. It gives a general overview of the company's background &
+                        others.</p>
                 </div>
             </div>
             <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light right-5"></div>
@@ -63,10 +67,12 @@ $SubscribeSection = new ModelSubscribe();
     <section class="work-process ptb-60">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-6 col-xl-6">
+                <div class="col-12">
+                    <p>
+                        <?= nl2br($configInfo_ar['aboutDetail']['value']) ?>
+                    </p>
                 </div>
-                <div class="col-lg-6 col-md-12 order-0 order-lg-1">
-                </div>
+
             </div>
         </div>
     </section>

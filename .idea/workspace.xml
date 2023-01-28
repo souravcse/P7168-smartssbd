@@ -6,19 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="45dd7373-d3eb-4839-b9c6-1cd18d4e6fd6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelFooter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelFooter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelHeader.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelHeader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/controllers/Pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/controllers/Pages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelCustomerReview.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelCustomerReview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelFaq.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelFaq.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelFeature.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelFeature.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelHero.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelHero.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/frontend/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/routes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/views/aboutPage_info_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/views/aboutPage_info_html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/views/contactPage_info_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/views/contactPage_info_html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/views/servicePage_info_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/views/servicePage_info_html.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/manages/TemplateLeftSidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/TemplateLeftSidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/manages/office/controllers/ManageConfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/controllers/ManageConfig.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/manages/office/controllers/ManageMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/controllers/ManageMessage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/manages/office/controllers/ManageProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/controllers/ManageProject.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/manages/office/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/routes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/manages/office/views/manageClient_list_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/views/manageClient_list_html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/manages/office/views/manageConfig_info_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/views/manageConfig_info_html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/manages/office/views/manageMessage_list_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/views/manageMessage_list_html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/views/manageProject_list_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/views/manageProject_list_html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/views/manageService_list_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/views/manageService_list_html.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/template-smartssbd/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/template-smartssbd/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/template-smartssbd/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/template-smartssbd/img/office-img-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/template-smartssbd/img/office-img-1.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +65,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "G:/xampp/htdocs/P7168-smartssbd/app/frontend/views",
+    "last_opened_file_path": "G:/xampp/htdocs/P7168-smartssbd/assets/template-smartssbd/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,8 +75,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\xampp\htdocs\P7168-smartssbd\app\frontend\views" />
       <recent name="G:\xampp\htdocs\P7168-smartssbd\assets\template-smartssbd\img" />
+      <recent name="G:\xampp\htdocs\P7168-smartssbd\app\frontend\views" />
       <recent name="G:\xampp\htdocs\P7168-smartssbd\assets\template-smartssbd\css" />
       <recent name="G:\xampp\htdocs\P7168-smartssbd\app" />
       <recent name="G:\xampp\htdocs\P7168-smartssbd" />
@@ -93,7 +96,11 @@
       <workItem from="1674471593656" duration="11970000" />
       <workItem from="1674529821173" duration="10999000" />
       <workItem from="1674572501442" duration="8317000" />
-      <workItem from="1674828039514" duration="9449000" />
+      <workItem from="1674828039514" duration="9693000" />
+      <workItem from="1674877033871" duration="6000" />
+      <workItem from="1674880348224" duration="29000" />
+      <workItem from="1674880433591" duration="601000" />
+      <workItem from="1674912883415" duration="10166000" />
     </task>
     <servers />
   </component>

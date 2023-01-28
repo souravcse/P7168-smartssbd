@@ -21,26 +21,6 @@ $CustomerReviewSection = new ModelCustomerReview();
 $FeatureSection = new ModelFeature();
 $WhyChooseSection = new ModelWhyChoose();
 $SubscribeSection = new ModelSubscribe();
-
-
-/** @var array $projectInfo_all_ar */
-
-$tr = "";
-$sl = 1;
-foreach ($projectInfo_all_ar as $det_ar) {
-    $tr .= "
-        <div class=\"feature-card bg-white shadow-sm rounded-custom p-5\">
-            <div class=\"icon-box d-inline-block rounded-circle mb-32\">
-                <img src=\"" . $det_ar['icon_url'] . "\" alt=\"\" style=\"width: 50px;height: 50px\">
-            </div>
-            <div class=\"feature-content\">
-                <h3 class=\"h5\">" . $det_ar['title'] . "</h3>
-                <p class=\"mb-0\">" . $det_ar['description'] . "</p>
-            </div>
-            <a href=\"#\" class=\"link-with-icon text-decoration-none mt-3\">View Details <i class=\"far fa-arrow-right\"></i></a>
-        </div>
-    ";
-}
 ?>
 
 
@@ -71,9 +51,8 @@ foreach ($projectInfo_all_ar as $det_ar) {
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
-                    <h1 class="display-5 fw-bold">Services</h1>
-                    <p class="lead">A software company provides services related to the development, maintenance, and
-                        distribution of software products.</p>
+                    <h1 class="display-5 fw-bold">Pricing</h1>
+                    <p class="lead">A software company's price page provides information on the cost of the company's products and services.</p>
                 </div>
             </div>
             <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light right-5"></div>
@@ -85,7 +64,16 @@ foreach ($projectInfo_all_ar as $det_ar) {
             <div class="row">
                 <div class="col-12">
                     <div class="feature-grid">
-                        <?= $tr ?>
+                        <div class="feature-card bg-white shadow-sm rounded-custom p-5">
+                            <div class="icon-box d-inline-block rounded-circle bg-warning-soft mb-32">
+                                <i class="fal fa-cog icon-sm text-warning"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="h5">Easy Customization</h3>
+                                <p class="mb-0">Dynamically develop ubiquitous opportunities whereas relationships.</p>
+                            </div>
+                            <a href="service-single.html" class="link-with-icon text-decoration-none mt-3">View Details <i class="far fa-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>

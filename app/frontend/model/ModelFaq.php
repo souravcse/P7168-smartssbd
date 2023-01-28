@@ -2,9 +2,28 @@
 
 namespace App\frontend\model;
 
+use Packages\mysql\QuerySelect;
+
 class ModelFaq
 {
-    function getHtml(){
+    function getHtml(): string
+    {
+        $select = new QuerySelect("faq_list");
+        $select->setQueryString("
+        SELECT * FROM `faq_list` 
+        WHERE 1
+        ");
+        $select->pull();
+        $faqInfo_all_ar = $select->getRows();
+
+        $faq = "";
+        $sl = 1;
+        foreach ($faqInfo_all_ar as $det_ar) {
+            $faq .= "<div class=\"faq-item mb-5\">
+                        <h5><span class=\"h3 text-primary me-2\">" . $sl . ".</span> " . $det_ar['title'] . "</h5>
+                        <p>" . $det_ar['description'] . "</p>
+                    </div>";
+        }
         return "
         <section class=\"faq-section ptb-120 bg-light\">
         <div class=\"container\">
@@ -21,23 +40,7 @@ class ModelFaq
             <div class=\"row align-items-center justify-content-between\">
                 <div class=\"col-lg-5 col-12\">
                     <div class=\"faq-wrapper\">
-                        <div class=\"faq-item mb-5\">
-                            <h5><span class=\"h3 text-primary me-2\">1.</span> How does back pricing work?</h5>
-                            <p>Progressively e-enable collaborative inexpensive supply chains. Efficiently maintain
-                                economically methods of empowerment for synergistic sound scenarios.</p>
-                        </div>
-                        <div class=\"faq-item mb-5\">
-                            <h5><span class=\"h3 text-primary me-2\">2.</span> How do I calculate how much price?</h5>
-                            <p>Globally benchmark customized mindshare before clicks-and-mortar partnerships.
-                                Efficiently maintain economically sound scenarios and whereas client-based
-                                progressively. </p>
-                        </div>
-                        <div class=\"faq-item\">
-                            <h5><span class=\"h3 text-primary me-2\">3.</span> Can you show me an example?</h5>
-                            <p> Dynamically visualize whereas competitive relationships. Progressively benchmark
-                                customized partnerships generate interdependent benefits rather sound scenarios and
-                                robust alignments.</p>
-                        </div>
+                        " . $faq . "
                     </div>
                 </div>
                 <div class=\"col-lg-6\">

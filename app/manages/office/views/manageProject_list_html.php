@@ -182,7 +182,7 @@ foreach ($projectInfo_all_ar as $det_ar) {
                     </div>
                     <div class="mt-4 fs-15">
                         <h4 class="mb-1">Are you sure ?</h4>
-                        <p class="text-muted mx-4 mb-0">Are you sure you want to remove this Notification ?</p>
+                        <p class="text-muted mx-4 mb-0">Are you sure you want to remove this ?</p>
                     </div>
                 </div>
                 <div class="d-flex gap-2 justify-content-center mt-4 mb-2">

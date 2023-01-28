@@ -11,6 +11,25 @@
         <route val="message-list" get="manageMessageList"/>
     </controller>
 
+    <controller val="ManageFaq" pageTitle="Manage Project" validationToken="false" auth="true">
+
+        <route val="faq-list/{sl}/remove" post="manageFAQRemovePost"/>
+        <route val="faq-list/{sl}/info/json" post="manageFAQInfoJson"/>
+        <route val="faq-list/{sl}/update" post="manageFAQUpdatePost"/>
+        <route val="faq-list/create" post="manageFAQCreatePost"/>
+        <route val="faq-list" get="manageFAQList"/>
+    </controller>
+
+    <controller val="ManageFeature" pageTitle="Manage Feature" validationToken="false" auth="true">
+
+        <route val="feature-list/{sl}/remove" post="manageFeatureRemovePost"/>
+        <route val="feature-list/{sl}/info/json" post="manageFeatureInfoJson"/>
+        <route val="feature-list/{sl}/update" post="manageFeatureUpdatePost"/>
+        <route val="feature-list/create" post="manageFeatureCreatePost"/>
+        <route val="feature-list" get="manageFeatureList"/>
+    </controller>
+
+
     <controller val="ManageServices" pageTitle="Manage Project" validationToken="false" auth="true">
 
         <route val="service-list/{sl}/remove" post="manageServiceRemovePost"/>
@@ -27,6 +46,15 @@
         <route val="project-list/{sl}/update" post="manageProjectUpdatePost"/>
         <route val="project-list/create" post="manageProjectCreatePost"/>
         <route val="project-list" get="manageProjectList"/>
+    </controller>
+
+    <controller val="ManageTestimonial" pageTitle="Manage Testimonial" validationToken="false" auth="true">
+
+        <route val="testimonial-list/{sl}/info/json" post="manageTestimonialInfoJson"/>
+        <route val="testimonial-list/{sl}/remove" post="manageTestimonialRemovePost"/>
+        <route val="testimonial-list/{sl}/update" post="manageTestimonialUpdatePost"/>
+        <route val="testimonial-list/create" post="manageTestimonialCreatePost"/>
+        <route val="testimonial-list" get="manageTestimonialList"/>
     </controller>
 
     <controller val="ManageClient" pageTitle="Manage Client" validationToken="false" auth="true">

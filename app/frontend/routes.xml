@@ -2,6 +2,7 @@
 
     <controller val="Pages" pageTitle="Contact Us" validationToken="false" auth="false">
 
+        <route val="pricing" get="pricingPageInfo" pageTitle="Pricing"/>
         <route val="services" get="servicesPageInfo" pageTitle="services"/>
         <route val="about-us" get="aboutPageInfo" pageTitle="About Us"/>
         <route val="contact-us" get="contactPageInfo" post="contactPageInfoPost" pageTitle="Contact Us"/>

@@ -72,6 +72,18 @@ class TemplateLeftSidebar
                         <a href=\"" . mkUrl("manage/config") . "\" class=\"nav-link menu-link " . ($acRoute == 'manage/config' ? 'active' : '') . "\"> <i class=\"ri-discuss-line\"></i> <span
                                     data-key=\"t-dashboard\">Config</span> </a>
                     </li>
+                    <li class=\"nav-item\">
+                        <a href=\"" . mkUrl("manage/faq-list") . "\" class=\"nav-link menu-link " . ($acRoute == 'manage/faq-list' ? 'active' : '') . "\"> <i class=\"ri-discuss-line\"></i> <span
+                                    data-key=\"t-dashboard\">FAQ</span> </a>
+                    </li>
+                    <li class=\"nav-item\">
+                        <a href=\"" . mkUrl("manage/feature-list") . "\" class=\"nav-link menu-link " . ($acRoute == 'manage/feature-list' ? 'active' : '') . "\"> <i class=\"ri-discuss-line\"></i> <span
+                                    data-key=\"t-dashboard\">Feature List</span> </a>
+                    </li>
+                    <li class=\"nav-item\">
+                        <a href=\"" . mkUrl("manage/testimonial-list") . "\" class=\"nav-link menu-link " . ($acRoute == 'manage/testimonial-list' ? 'active' : '') . "\"> <i class=\"ri-discuss-line\"></i> <span
+                                    data-key=\"t-dashboard\">Testimonial List</span> </a>
+                    </li>
                 </ul>
             </div>
             <!-- Sidebar -->

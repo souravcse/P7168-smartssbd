@@ -21,6 +21,9 @@ $CustomerReviewSection = new ModelCustomerReview();
 $FeatureSection = new ModelFeature();
 $WhyChooseSection = new ModelWhyChoose();
 $SubscribeSection = new ModelSubscribe();
+
+/** @var array $configInfo_ar */
+
 ?>
 
 
@@ -52,8 +55,7 @@ $SubscribeSection = new ModelSubscribe();
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <h1 class="display-5 fw-bold">Contact Us</h1>
-                    <p class="lead">Seamlessly actualize client-based users after out-of-the-box value data through
-                        frictionless expertise.</p>
+                    <p class="lead">A software company's contact page typically provides various ways for potential customers and clients to get in touch with the company, such as an email address, phone number, and physical address.</p>
                 </div>
             </div>
             <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light right-5"></div>
@@ -66,13 +68,7 @@ $SubscribeSection = new ModelSubscribe();
                 <div class="col-12 col-lg-6 col-xl-6">
                     <div class="contact-section-info">
                         <h4>Contact Info</h4>
-                        <p>The European languages are members of the same family. Their <br>separate existence is a
-                            myth. For
-                            science, music, sport, etc, Europe <br>uses the same vocabulary. The languages only differ
-                            in their<br>
-                            grammar, their pronunciation and their most common words. <br>Everyone realizes why a new
-                            common
-                            language would be desirable</p>
+                        <p><?=nl2br($configInfo_ar['contactDetail']['value'])?></p>
                         <table>
 
                             <tbody>
@@ -80,28 +76,25 @@ $SubscribeSection = new ModelSubscribe();
                                 <td><img src="/assets/template-smartssbd/img/building-icon.svg" alt="Icon"></td>
                                 <td></td>
                                 <td></td>
-                                <td>44/F/8 (2nd Floor), Panthapath,
-                                    Dhaka – 1215
-                                    Bangladesh.
-                                </td>
+                                <td><?=$configInfo_ar['addressInp']['value']?></td>
                             </tr>
                             <tr>
                                 <td><img src="/assets/template-smartssbd/img/call-icon2.svg" alt="Icon"></td>
                                 <td></td>
                                 <td></td>
-                                <td> +880-410-24246, +880-410-24248</td>
+                                <td><?=$configInfo_ar['contactInp']['value']?></td>
                             </tr>
                             <tr>
                                 <td><img src="/assets/template-smartssbd/img/fax-icon.svg" alt="Icon"></td>
                                 <td></td>
                                 <td></td>
-                                <td>+880-410-24918</td>
+                                <td><?=$configInfo_ar['faxInp']['value']?></td>
                             </tr>
                             <tr>
                                 <td><img src="/assets/template-smartssbd/img/email-icon2.svg" alt="Icon"></td>
                                 <td></td>
                                 <td></td>
-                                <td> info@smartssbd.com</td>
+                                <td><?=$configInfo_ar['emailInp']['value']?></td>
                             </tr>
                             </tbody>
                         </table>

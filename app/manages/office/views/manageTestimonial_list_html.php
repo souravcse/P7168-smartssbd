@@ -10,17 +10,18 @@ $Header = new TemplateHeader();
 $Sidebar = new TemplateLeftSidebar();
 $Footer = new TemplateFooter();
 
-/** @var array $clientInfo_all_ar */
+/** @var array $testimonialInfo_all_ar */
 
 $tr = "";
 $sl = 1;
-foreach ($clientInfo_all_ar as $det_ar) {
+foreach ($testimonialInfo_all_ar as $det_ar) {
     $tr .= "<tr> 
             <td>" . $sl++ . "</td>
             <td>" . $det_ar['title'] . "</td>
             <td>" . $det_ar['description'] . "</td>
-            <td>" . $det_ar['email'] . "</td>
-            <td>" . $det_ar['contact'] . "</td>
+            <td>" . $det_ar['point'] . "</td>
+            <td>" . $det_ar['name'] . "</td>
+            <td>" . $det_ar['designation'] . "</td>
             <td><img src=" . $det_ar['logo_url'] . " alt='' style=\"width: 50px\"> </td>
             <td>" . $det_ar['status'] . "</td>
             <td> 
@@ -58,7 +59,7 @@ foreach ($clientInfo_all_ar as $det_ar) {
 <div id="layout-wrapper">
 
 
-    <?= $Header->getHtml("Client List") ?>
+    <?= $Header->getHtml("Testimonial List") ?>
     <!-- ========== App Menu ========== -->
     <?= $Sidebar->getHtml() ?>
     <!-- Left Sidebar End -->
@@ -100,9 +101,10 @@ foreach ($clientInfo_all_ar as $det_ar) {
                                                 <th>SL</th>
                                                 <th>Title</th>
                                                 <th>Description</th>
-                                                <th>Email</th>
-                                                <th>Contact</th>
-                                                <th>Logo Url</th>
+                                                <th>Point (Out of 5)</th>
+                                                <th>Name</th>
+                                                <th>Designation</th>
+                                                <th>Image Url</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -124,7 +126,7 @@ foreach ($clientInfo_all_ar as $det_ar) {
 
         <div>
             <button type="button" class="btn-success btn-rounded shadow-lg btn btn-icon layout-rightside-btn fs-22"><i
-                        class="ri-chat-smile-2-line"></i></button>
+                    class="ri-chat-smile-2-line"></i></button>
         </div>
         <?= $Footer->getHtml() ?>
     </div>
@@ -144,37 +146,37 @@ foreach ($clientInfo_all_ar as $det_ar) {
                 <div class="row">
                     <div class="col-12">
                         <div class="mb-3">
-                            <label for="title" class="form-label">Name</label>
-                            <input type="text" class="form-control" name="title" placeholder="Enter Client Name"
+                            <label for="title" class="form-label">Title</label>
+                            <input type="text" class="form-control" name="title" placeholder="Enter Title"
                                    id="title">
                         </div>
                     </div><!--end col-->
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="description" class="form-label">Description</label>
-                            <input type="text" class="form-control" name="description" placeholder="Enter Description"
-                                   id="description">
+                            <textarea class="form-control" name="description" placeholder="Enter Description"
+                                      id="description"></textarea>
                         </div>
                     </div><!--end col-->
                     <div class="col-12">
                         <div class="mb-3">
-                            <label for="address" class="form-label">Address</label>
-                            <textarea class="form-control" name="address" placeholder="Enter Address"
-                                      id="address"></textarea>
+                            <label for="point" class="form-label">Point (Out of 5)</label>
+                            <input type="text" class="form-control" name="point" placeholder="Enter Point (Out of 5)"
+                                      id="point">
                         </div>
                     </div><!--end col-->
                     <div class="col-6">
                         <div class="mb-3">
-                            <label for="contact" class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" name="contact" placeholder="+88012345678"
-                                   id="contact">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="tel" class="form-control" name="name" placeholder="Enter Name"
+                                   id="name">
                         </div>
                     </div><!--end col-->
                     <div class="col-6">
                         <div class="mb-3">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" name="email" placeholder="example@gamil.com"
-                                   id="email">
+                            <label for="designation" class="form-label">Designation</label>
+                            <input type="text" class="form-control" name="designation" placeholder="Enter Designation"
+                                   id="designation">
                         </div>
                     </div>
                     <div class="col-12">
@@ -252,8 +254,8 @@ foreach ($clientInfo_all_ar as $det_ar) {
         let $title = $modal.find('.modal-title');
         let $form = $modal.find('form');
 
-        $title.html('Add New Client');
-        $form.trigger('reset').attr('action', '<?= mkUrl("manage/client-list/create") ?>').attr('data-mode', 'create');
+        $title.html('Add New Testimonial');
+        $form.trigger('reset').attr('action', '<?= mkUrl("manage/testimonial-list/create") ?>').attr('data-mode', 'create');
 
         return false;
     });
@@ -263,15 +265,15 @@ foreach ($clientInfo_all_ar as $det_ar) {
         let $form = $modal.find('form');
         let id = $(this).attr('data-id');
 
-        $title.html('Edit Client');
-        $form.trigger('reset').attr('action', '<?= mkUrl("manage/client-list/{sl}/update", ['sl' => "' + id + '"]) ?>').attr('data-mode', 'update');
+        $title.html('Edit Testimonial');
+        $form.trigger('reset').attr('action', '<?= mkUrl("manage/testimonial-list/{sl}/update", ['sl' => "' + id + '"]) ?>').attr('data-mode', 'update');
 
-        $.post('<?= mkUrl("manage/client-list/{sl}/info/json", ['sl' => "' + id + '"]) ?>', function (data) {
+        $.post('<?= mkUrl("manage/testimonial-list/{sl}/info/json", ['sl' => "' + id + '"]) ?>', function (data) {
             $('#title').val(data['title']);
             $('#description').val(data['description']);
-            $('#address').val(data['address']);
-            $('#contact').val(data['contact']);
-            $('#email').val(data['email']);
+            $('#point').val(data['point']);
+            $('#name').val(data['name']);
+            $('#designation').val(data['designation']);
             $('#image_url').val(data['logo_url']).change();
 
         }, "json");
@@ -285,7 +287,7 @@ foreach ($clientInfo_all_ar as $det_ar) {
         let id = $(this).attr('data-id');
 
         $title.html('Edit Client');
-        $form.trigger('reset').attr('action', '<?= mkUrl("manage/client-list/{sl}/remove", ['sl' => "' + id + '"]) ?>').attr('data-mode', 'update');
+        $form.trigger('reset').attr('action', '<?= mkUrl("manage/testimonial-list/{sl}/remove", ['sl' => "' + id + '"]) ?>').attr('data-mode', 'update');
 
         return false;
     });

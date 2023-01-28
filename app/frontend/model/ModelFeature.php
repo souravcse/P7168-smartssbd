@@ -2,9 +2,37 @@
 
 namespace App\frontend\model;
 
+use Packages\mysql\QuerySelect;
+
 class ModelFeature
 {
-    function getHtml(){
+    function getHtml(): string
+    {
+        $select = new QuerySelect("feature_list");
+        $select->setQueryString("
+        SELECT * FROM `feature_list` 
+        WHERE 1
+        ORDER BY `sl` LIMIT 3
+        ");
+        $select->pull();
+        $featureInfo_all_ar = $select->getRows();
+
+
+        $feature = "";
+        $sl = 1;
+        foreach ($featureInfo_all_ar as $det_ar) {
+            $feature .= "<div class=\"col-lg-4 col-md-6\">
+                    <div class=\"single-feature-promo p-lg-5 p-4 text-center mt-3\">
+                        <div class=\"feature-icon icon-center pb-5\">
+                          <img src= \" " . $det_ar['icon_url'] . "\" alt='' style=\"width: 90px;\">
+                        </div>
+                        <div class=\"feature-info-wrap\">
+                            <h3 class=\"h5\">" . $det_ar['title'] . "</h3>
+                            <p>" . $det_ar['description'] . "</p>
+                        </div>
+                    </div>
+                </div>";
+        }
         return "
         <section class=\"feature-promo ptb-120 bg-light\">
         <div class=\"container\">
@@ -18,42 +46,8 @@ class ModelFeature
                 </div>
             </div>
             <div class=\"row justify-content-center\">
-                <div class=\"col-lg-4 col-md-6\">
-                    <div class=\"single-feature-promo p-lg-5 p-4 text-center mt-3\">
-                        <div class=\"feature-icon icon-center pb-5 rounded-custom bg-primary\">
-                            <i class=\"fal fa-layer-group fa-2x text-white\"></i>
-                        </div>
-                        <div class=\"feature-info-wrap\">
-                            <h3 class=\"h5\">Good Performance</h3>
-                            <p>Appropriately grow competitive leadership rather than strategic technically sound
-                                processes without state. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-md-6\">
-                    <div class=\"single-feature-promo p-lg-5 p-4 text-center mt-3\">
-                        <div class=\"feature-icon icon-center pb-5 rounded-custom bg-danger\">
-                            <i class=\"fal fa-shield-check fa-2x text-white\"></i>
-                        </div>
-                        <div class=\"feature-info-wrap\">
-                            <h3 class=\"h5\">Highly Secure</h3>
-                            <p>Appropriately grow competitive leadership rather than strategic technically sound
-                                processes without state. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-lg-4 col-md-6\">
-                    <div class=\"single-feature-promo p-lg-5 p-4 text-center mt-3\">
-                        <div class=\"feature-icon icon-center pb-5 rounded-custom bg-dark\">
-                            <i class=\"fal fa-code fa-2x text-white\"></i>
-                        </div>
-                        <div class=\"feature-info-wrap\">
-                            <h3 class=\"h5\">Fast Development</h3>
-                            <p>Appropriately grow competitive leadership rather than strategic technically sound
-                                processes without state. </p>
-                        </div>
-                    </div>
-                </div>
+                
+                " . $feature . "
             </div>
             <div class=\"row pt-lg-5 pt-3\">
                 <div class=\"col-lg-6 mt-4\">

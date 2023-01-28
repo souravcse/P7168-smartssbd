@@ -10,18 +10,16 @@ $Header = new TemplateHeader();
 $Sidebar = new TemplateLeftSidebar();
 $Footer = new TemplateFooter();
 
-/** @var array $clientInfo_all_ar */
+/** @var array $faqInfo_all_ar */
 
 $tr = "";
 $sl = 1;
-foreach ($clientInfo_all_ar as $det_ar) {
+foreach ($faqInfo_all_ar as $det_ar) {
     $tr .= "<tr> 
             <td>" . $sl++ . "</td>
             <td>" . $det_ar['title'] . "</td>
-            <td>" . $det_ar['description'] . "</td>
-            <td>" . $det_ar['email'] . "</td>
-            <td>" . $det_ar['contact'] . "</td>
-            <td><img src=" . $det_ar['logo_url'] . " alt='' style=\"width: 50px\"> </td>
+            <td style='white-space: normal'>" . $det_ar['description'] . "</td>
+            <td>" . $det_ar['priority'] . "</td>
             <td>" . $det_ar['status'] . "</td>
             <td> 
                 <div class=\"d-flex gap-2\">
@@ -38,7 +36,6 @@ foreach ($clientInfo_all_ar as $det_ar) {
             </td>
         </tr>";
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +55,7 @@ foreach ($clientInfo_all_ar as $det_ar) {
 <div id="layout-wrapper">
 
 
-    <?= $Header->getHtml("Client List") ?>
+    <?= $Header->getHtml("FAQ List") ?>
     <!-- ========== App Menu ========== -->
     <?= $Sidebar->getHtml() ?>
     <!-- Left Sidebar End -->
@@ -100,9 +97,7 @@ foreach ($clientInfo_all_ar as $det_ar) {
                                                 <th>SL</th>
                                                 <th>Title</th>
                                                 <th>Description</th>
-                                                <th>Email</th>
-                                                <th>Contact</th>
-                                                <th>Logo Url</th>
+                                                <th>Priority</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -124,7 +119,7 @@ foreach ($clientInfo_all_ar as $det_ar) {
 
         <div>
             <button type="button" class="btn-success btn-rounded shadow-lg btn btn-icon layout-rightside-btn fs-22"><i
-                        class="ri-chat-smile-2-line"></i></button>
+                    class="ri-chat-smile-2-line"></i></button>
         </div>
         <?= $Footer->getHtml() ?>
     </div>
@@ -133,7 +128,7 @@ foreach ($clientInfo_all_ar as $det_ar) {
 </div>
 <!-- END layout-wrapper -->
 
-<div class="modal" tabindex="-1" id="clientModal">
+<div class="modal" tabindex="-1" id="projectModal">
     <div class="modal-dialog">
         <form class="modal-content" action="" method="post" id="form">
             <div class="modal-header">
@@ -152,53 +147,15 @@ foreach ($clientInfo_all_ar as $det_ar) {
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="description" class="form-label">Description</label>
-                            <input type="text" class="form-control" name="description" placeholder="Enter Description"
-                                   id="description">
+                            <textarea class="form-control" name="description" placeholder="Enter Description"
+                                      id="description"></textarea>
                         </div>
                     </div><!--end col-->
                     <div class="col-12">
                         <div class="mb-3">
-                            <label for="address" class="form-label">Address</label>
-                            <textarea class="form-control" name="address" placeholder="Enter Address"
-                                      id="address"></textarea>
-                        </div>
-                    </div><!--end col-->
-                    <div class="col-6">
-                        <div class="mb-3">
-                            <label for="contact" class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" name="contact" placeholder="+88012345678"
-                                   id="contact">
-                        </div>
-                    </div><!--end col-->
-                    <div class="col-6">
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" name="email" placeholder="example@gamil.com"
-                                   id="email">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-row">
-                            <div class="form-group col-md-4">
-                                <label for="image_url">Image URL:</label>
-
-                                <div class="input-group mb-2">
-                                    <input type="text" name="image_url" class="form-control" id="image_url">
-
-                                    <div class="input-group-append">
-                                        <button type="button" class="btn btn-primary default" id="btnUploadFile">
-                                            <i class="fa fa-upload"></i>
-                                        </button>
-                                    </div>
-                                    <div class="input-group-append">
-                                        <button type="button" class="btn btn-danger default" id="btnCancelFile">
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div id="image_url_preview"></div>
-                            </div>
+                            <label for="priority" class="form-label">Priority</label>
+                            <input type="number" value="0" class="form-control" name="priority" placeholder="Enter Priority"
+                                   id="priority">
                         </div>
                     </div><!--end col-->
 
@@ -211,8 +168,6 @@ foreach ($clientInfo_all_ar as $det_ar) {
         </form>
     </div>
 </div>
-
-<input name="upload_image" type="file" id="inpUploadFile" class="hide">
 
 <div id="removeModal" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -248,31 +203,28 @@ foreach ($clientInfo_all_ar as $det_ar) {
 <?= assetsJs('admin') ?>
 <script>
     $('#create-btn').on('click', function () {
-        let $modal = $('#clientModal').modal('show');
+        let $modal = $('#projectModal').modal('show');
         let $title = $modal.find('.modal-title');
         let $form = $modal.find('form');
 
-        $title.html('Add New Client');
-        $form.trigger('reset').attr('action', '<?= mkUrl("manage/client-list/create") ?>').attr('data-mode', 'create');
+        $title.html('Add New FAQ');
+        $form.trigger('reset').attr('action', '<?= mkUrl("manage/faq-list/create") ?>').attr('data-mode', 'create');
 
         return false;
     });
     $('.edit-btn').on('click', function () {
-        let $modal = $('#clientModal').modal('show');
+        let $modal = $('#projectModal').modal('show');
         let $title = $modal.find('.modal-title');
         let $form = $modal.find('form');
         let id = $(this).attr('data-id');
 
-        $title.html('Edit Client');
-        $form.trigger('reset').attr('action', '<?= mkUrl("manage/client-list/{sl}/update", ['sl' => "' + id + '"]) ?>').attr('data-mode', 'update');
+        $title.html('Edit FAQ');
+        $form.trigger('reset').attr('action', '<?= mkUrl("manage/faq-list/{sl}/update", ['sl' => "' + id + '"]) ?>').attr('data-mode', 'update');
 
-        $.post('<?= mkUrl("manage/client-list/{sl}/info/json", ['sl' => "' + id + '"]) ?>', function (data) {
+        $.post('<?= mkUrl("manage/faq-list/{sl}/info/json", ['sl' => "' + id + '"]) ?>', function (data) {
             $('#title').val(data['title']);
             $('#description').val(data['description']);
-            $('#address').val(data['address']);
-            $('#contact').val(data['contact']);
-            $('#email').val(data['email']);
-            $('#image_url').val(data['logo_url']).change();
+            $('#priority').val(data['priority']);
 
         }, "json");
 
@@ -284,59 +236,11 @@ foreach ($clientInfo_all_ar as $det_ar) {
         let $form = $modal.find('form');
         let id = $(this).attr('data-id');
 
-        $title.html('Edit Client');
-        $form.trigger('reset').attr('action', '<?= mkUrl("manage/client-list/{sl}/remove", ['sl' => "' + id + '"]) ?>').attr('data-mode', 'update');
+        $title.html('Edit FAQ');
+        $form.trigger('reset').attr('action', '<?= mkUrl("manage/faq-list/{sl}/remove", ['sl' => "' + id + '"]) ?>').attr('data-mode', 'update');
 
         return false;
     });
-    //Images
-    $('#image_url').on('change', function () {
-        if ($(this).val()) {
-            $('#image_url_preview').html("<img src=\"" + $(this).val() + "\" alt=\"\" width=\"100%\" />");
-        } else {
-            $('#image_url_preview').html("");
-        }
-    }).change();
-
-    $('#btnPickImage').on('click', function () {
-        $('#PickImage').modal('show');
-        $('#queryImage').change();
-    });
-
-    let $showImages = $('#showImages');
-    let innerHtml = $showImages.html();
-    $('#queryImage').on('change', function () {
-        $.post('<?= mkUrl("manage/image/search-result") ?>', {key: $(this).val()}, function (data) {
-            //console.log(data);
-            $showImages.html("");
-
-            $.each(data, function (i, item) {
-                $showImages.append("<img src=\"" + item.image + "\" alt=\"\" class=\"image-thumb-150x100\" />");
-            })
-        }, "json");
-    });
-
-
-    $(document).on('click', '#showImages img', function (e) {
-        let $this = $(this);
-
-        $('#image_url').val($this.attr('src')).change();
-        $('#PickImage').modal('hide');
-    });
-
-    $('#btnUploadFile').on('click', function () {
-        $('#inpUploadFile').click();
-    });
-
-    $('#inpUploadFile').change(function () {
-        $(this).ajaxFileUpload("<?= mkUrl("upload/image") ?>");
-    });
-
-    $('#btnCancelFile').on('click', function () {
-        console.log("OK");
-        $('#image_url').val('').change();
-    })
-
     $('#form').ajaxFormOnSubmit();
     $('#removeForm').ajaxFormOnSubmit();
 
