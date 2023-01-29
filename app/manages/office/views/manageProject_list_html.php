@@ -4,6 +4,7 @@ use App\manages\TemplateFooter;
 use App\manages\TemplateHeader;
 use App\manages\TemplateLeftSidebar;
 use Core\HeaderMeta;
+use Packages\html\DropDown;
 
 $HeaderMeta = new HeaderMeta();
 $Header = new TemplateHeader();
@@ -11,15 +12,20 @@ $Sidebar = new TemplateLeftSidebar();
 $Footer = new TemplateFooter();
 
 /** @var array $projectInfo_all_ar */
+/** @var array $clientInfo_all_ar */
 
 $tr = "";
 $sl = 1;
 foreach ($projectInfo_all_ar as $det_ar) {
     $tr .= "<tr> 
             <td>" . $sl++ . "</td>
+            <td>" . date("Y-m-d", $det_ar['startDate']) . "</td>
+            <td>" . $clientInfo_all_ar[$det_ar['client_sl']]['title'] . "</td>
             <td>" . $det_ar['title'] . "</td>
             <td>" . $det_ar['description'] . "</td>
+            <td>" . $det_ar['category'] . "</td>
             <td><a href=\"" . $det_ar['demo_url'] . "\" target=\"_blank\"> " . $det_ar['demo_url'] . "</a></td>
+            <td><img src=" . $det_ar['banner_url'] . " alt='' style=\"width: 50px\"> </td>
             <td>" . $det_ar['status'] . "</td>
             <td> 
                 <div class=\"d-flex gap-2\">
@@ -95,9 +101,13 @@ foreach ($projectInfo_all_ar as $det_ar) {
                                             <thead class="table-light">
                                             <tr>
                                                 <th>SL</th>
+                                                <th>Start Date</th>
+                                                <th>Client</th>
                                                 <th>Title</th>
                                                 <th>Description</th>
+                                                <th>Category</th>
                                                 <th>Demo Link</th>
+                                                <th>Banner</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -139,6 +149,19 @@ foreach ($projectInfo_all_ar as $det_ar) {
                 <div class="row">
                     <div class="col-12">
                         <div class="mb-3">
+                            <label for="client_sl" class="form-label">Client</label>
+                            <?php
+                            $dropDown = new DropDown("client_sl");
+                            $dropDown->setAttribute('id', 'client_sl');
+                            $dropDown->setAttribute('class', 'form-control');
+                            $dropDown->setOption("", "Select Client");
+                            $dropDown->setOptionArrayM($clientInfo_all_ar,"sl","title");
+                            echo $dropDown->getHtml();
+                            ?>
+                        </div>
+                    </div><!--end col-->
+                    <div class="col-12">
+                        <div class="mb-3">
                             <label for="title" class="form-label">Name</label>
                             <input type="text" class="form-control" name="title" placeholder="Enter Client Name"
                                    id="title">
@@ -147,15 +170,54 @@ foreach ($projectInfo_all_ar as $det_ar) {
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="description" class="form-label">Description</label>
-                            <input type="text" class="form-control" name="description" placeholder="Enter Description"
-                                   id="description">
+                            <textarea class="form-control" name="description" placeholder="Enter Description"
+                                      id="description"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="category" class="form-label">Category</label>
+                            <input type="text" class="form-control" name="category" placeholder="Enter Category"
+                                   id="category">
                         </div>
                     </div><!--end col-->
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="demo_url" class="form-label">Demo Link</label>
-                            <input type="tel" class="form-control" name="demo_url" placeholder="Enter Demo Link"
+                            <input type="url" class="form-control" name="demo_url" placeholder="Enter Demo Link"
                                    id="demo_url">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="startDate" class="form-label">Start From</label>
+                            <input type="date" class="form-control" name="startDate" placeholder="Enter Demo Link"
+                                   id="startDate">
+                        </div>
+                    </div>
+                    <!--end col-->
+                    <div class="col-12">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="image_url">Banner URL:</label>
+
+                                <div class="input-group mb-2">
+                                    <input type="text" name="image_url" class="form-control" id="image_url">
+
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-primary default" id="btnUploadFile">
+                                            <i class="fa fa-upload"></i>
+                                        </button>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-danger default" id="btnCancelFile">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div id="image_url_preview"></div>
+                            </div>
                         </div>
                     </div><!--end col-->
 
@@ -173,7 +235,8 @@ foreach ($projectInfo_all_ar as $det_ar) {
     <div class="modal-dialog modal-dialog-centered">
         <form class="modal-content" action="" method="post" id="removeForm">
             <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="NotificationModalbtn-close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        id="NotificationModalbtn-close"></button>
             </div>
             <div class="modal-body p-md-5">
                 <div class="text-center">
@@ -194,6 +257,8 @@ foreach ($projectInfo_all_ar as $det_ar) {
         </form><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+<input name="upload_image" type="file" id="inpUploadFile" class="hide">
 
 <!--start back-to-top-->
 <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
@@ -223,8 +288,12 @@ foreach ($projectInfo_all_ar as $det_ar) {
 
         $.post('<?= mkUrl("manage/project-list/{sl}/info/json", ['sl' => "' + id + '"]) ?>', function (data) {
             $('#title').val(data['title']);
+            $('#client_sl').val(data['client_sl']);
             $('#description').val(data['description']);
+            $('#category').val(data['category']);
             $('#demo_url').val(data['demo_url']);
+            $('#startDate').val(data['startDate']);
+            $('#image_url').val(data['banner_url']).change();
 
         }, "json");
 

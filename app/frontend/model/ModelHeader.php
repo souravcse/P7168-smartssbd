@@ -4,7 +4,7 @@ namespace App\frontend\model;
 
 class ModelHeader
 {
-    function getHtml()
+    function getHtml(): string
     {
         return "
          <header class=\"main-header position-absolute w-100\">

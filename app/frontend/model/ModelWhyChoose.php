@@ -4,32 +4,31 @@ namespace App\frontend\model;
 
 class ModelWhyChoose
 {
-    function getHtml()
+    function getHtml(): string
     {
         return "
             <section class=\"why-choose-us ptb-120\">
         <div class=\"container\">
             <div class=\"row justify-content-lg-between align-items-center\">
-                <div class=\"col-lg-5 col-12\">
+                <div class=\"col-lg-6 col-12\">
                     <div class=\"why-choose-content\">
                         <div class=\"icon-box rounded-custom bg-primary shadow-sm d-inline-block\">
                             <i class=\"fal fa-shield-check fa-2x text-white\"></i>
                         </div>
                         <h2>Advanced Analytics, Understand Business</h2>
-                        <p>Distinctively promote parallel vortals with ubiquitous e-markets. Proactively benchmark
-                            turnkey optimize next-generation strategic leadership without resource sucking ideas.</p>
+                        <p>It includes statistical analysis, predictive modeling, machine learning, and data mining. The goal is to identify patterns and relationships in data, which can be used to improve business processes and drive growth. In order to implement advanced analytics effectively, businesses need to have the right data infrastructure in place, the right people with the right skills, and a culture that encourages the use of data to inform decision-making.</p>
                         <ul class=\"list-unstyled d-flex flex-wrap list-two-col mt-4 mb-4\">
-                            <li class=\"py-1\"><i class=\"fas fa-check-circle me-2 text-primary\"></i>Thought leadership
+                            <li class=\"py-1\"><i class=\"fas fa-check-circle me-2 text-primary\"></i>Customer segmentation
                             </li>
-                            <li class=\"py-1\"><i class=\"fas fa-check-circle me-2 text-primary\"></i>Personal branding</li>
-                            <li class=\"py-1\"><i class=\"fas fa-check-circle me-2 text-primary\"></i>Modernized prospecting
+                            <li class=\"py-1\"><i class=\"fas fa-check-circle me-2 text-primary\"></i>Predictive maintenance</li>
+                            <li class=\"py-1\"><i class=\"fas fa-check-circle me-2 text-primary\"></i>Supply chain optimization
                             </li>
-                            <li class=\"py-1\"><i class=\"fas fa-check-circle me-2 text-primary\"></i>Better win rates</li>
+                            <li class=\"py-1\"><i class=\"fas fa-check-circle me-2 text-primary\"></i>Predictive pricing</li>
                             <li class=\"py-1\"><i class=\"fas fa-check-circle me-2 text-primary\"></i>Showcasing success
                             </li>
                             <li class=\"py-1\"><i class=\"fas fa-check-circle me-2 text-primary\"></i>Sales compliance</li>
                         </ul>
-                        <a href=\"about-us.html\" class=\"read-more-link text-decoration-none\">Know More About Us <i
+                        <a href=\"".mkUrl("about-us")."\" class=\"read-more-link text-decoration-none\">Know More About Us <i
                                     class=\"far fa-arrow-right ms-2\"></i></a>
                     </div>
                 </div>

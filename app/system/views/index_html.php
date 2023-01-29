@@ -6,6 +6,7 @@ use App\frontend\model\ModelFeature;
 use App\frontend\model\ModelFooter;
 use App\frontend\model\ModelHeader;
 use App\frontend\model\ModelHero;
+use App\frontend\model\ModelPortfolio;
 use App\frontend\model\ModelSubscribe;
 use App\frontend\model\ModelWhyChoose;
 use App\frontend\model\ModelWorkProcess;
@@ -21,6 +22,7 @@ $CustomerReviewSection = new ModelCustomerReview();
 $FeatureSection = new ModelFeature();
 $WhyChooseSection = new ModelWhyChoose();
 $SubscribeSection = new ModelSubscribe();
+$PortfolioSection = new ModelPortfolio();
 ?>
 
 
@@ -54,10 +56,13 @@ $SubscribeSection = new ModelSubscribe();
     <?= $FeatureSection->getHtml() ?>
     <!--feature promo section end-->
 
-    <!--feature left right content start-->
     <!--why choose us section start-->
     <?= $WhyChooseSection->getHtml() ?>
     <!--why choose us section end-->
+
+    <!--portfolio section start-->
+    <?= $PortfolioSection->getHtml() ?>
+    <!--portfolio section end-->
 
     <!--customer review tab section start-->
     <?= $CustomerReviewSection->getHtml() ?>

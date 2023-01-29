@@ -4,7 +4,8 @@ namespace App\frontend\model;
 
 class ModelFooter
 {
-    function getHtml(){
+    function getHtml(): string
+    {
         return "
             <footer class=\"footer-section\">
         <!--footer top start-->

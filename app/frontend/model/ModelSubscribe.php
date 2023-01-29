@@ -4,7 +4,7 @@ namespace App\frontend\model;
 
 class ModelSubscribe
 {
-    function getHtml()
+    function getHtml(): string
     {
         return "
         <section class=\"cta-subscribe pt-60 pb-120 \">

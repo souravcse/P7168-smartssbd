@@ -4,7 +4,7 @@ namespace App\frontend\model;
 
 class ModelWorkProcess
 {
-    function getHtml()
+    function getHtml(): string
     {
         return "
         <section class=\"work-process ptb-120\">

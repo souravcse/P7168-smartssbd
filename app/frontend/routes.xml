@@ -1,7 +1,8 @@
 <resources>
 
-    <controller val="Pages" pageTitle="Contact Us" validationToken="false" auth="false">
+    <controller val="Pages" pageTitle="Pages" validationToken="false" auth="false">
 
+        <route val="project/{sl}/detail" get="projectDetail" pageTitle="Project Detail"/>
         <route val="pricing" get="pricingPageInfo" pageTitle="Pricing"/>
         <route val="services" get="servicesPageInfo" pageTitle="services"/>
         <route val="about-us" get="aboutPageInfo" pageTitle="About Us"/>

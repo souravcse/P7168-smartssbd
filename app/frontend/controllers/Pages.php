@@ -103,4 +103,31 @@ class Pages
         return view("pricingPage_info_html.php");
     }
 
+    function projectDetail(): string
+    {
+        $sl = route()->getUriVariablesAr()['sl'];
+
+        $select = new QuerySelect("project_list");
+        $select->setQueryString("
+        SELECT * FROM `project_list` 
+        WHERE `sl`=" . quote($sl) . "
+        ");
+        $select->pull();
+        $projectInfo_ar = $select->getRow();
+
+        $select = new QuerySelect("client_list");
+        $select->setQueryString("
+        SELECT * FROM `client_list` 
+        WHERE `sl`=".quote($projectInfo_ar['client_sl'])."
+        ");
+        $select->pull();
+        $clientInfo_ar = $select->getRow();
+
+        return view("projectDetailPage_info_html.php", [
+            'projectInfo_ar' => $projectInfo_ar,
+            'clientInfo_ar' => $clientInfo_ar,
+        ]);
+
+    }
+
 }

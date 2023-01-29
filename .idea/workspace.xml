@@ -8,20 +8,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/frontend/controllers/Pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/controllers/Pages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelCustomerReview.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelCustomerReview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelFaq.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelFaq.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelFeature.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelFeature.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelHero.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelHero.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelFooter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelFooter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelHeader.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelHeader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelSubscribe.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelSubscribe.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelWhyChoose.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelWhyChoose.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/frontend/model/ModelWorkProcess.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/model/ModelWorkProcess.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/frontend/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/routes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/views/aboutPage_info_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/views/aboutPage_info_html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/views/contactPage_info_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/views/contactPage_info_html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/frontend/views/servicePage_info_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/frontend/views/servicePage_info_html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/manages/TemplateLeftSidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/TemplateLeftSidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/manages/office/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/routes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/manages/office/views/manageClient_list_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/views/manageClient_list_html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/manages/office/controllers/ManageProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/controllers/ManageProject.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/manages/office/views/manageProject_list_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/views/manageProject_list_html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/manages/office/views/manageService_list_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/manages/office/views/manageService_list_html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/template-smartssbd/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/template-smartssbd/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/template-smartssbd/img/office-img-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/template-smartssbd/img/office-img-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/system/views/index_html.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/system/views/index_html.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,19 +56,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "G:/xampp/htdocs/P7168-smartssbd/assets/template-smartssbd/img",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/xampp/htdocs/P7168-smartssbd/assets/template-smartssbd/img&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\xampp\htdocs\P7168-smartssbd\assets\template-smartssbd\img" />
@@ -100,7 +96,9 @@
       <workItem from="1674877033871" duration="6000" />
       <workItem from="1674880348224" duration="29000" />
       <workItem from="1674880433591" duration="601000" />
-      <workItem from="1674912883415" duration="10166000" />
+      <workItem from="1674912883415" duration="10761000" />
+      <workItem from="1674962921856" duration="97000" />
+      <workItem from="1675004990120" duration="5739000" />
     </task>
     <servers />
   </component>
