@@ -118,7 +118,7 @@ class Pages
         $select = new QuerySelect("client_list");
         $select->setQueryString("
         SELECT * FROM `client_list` 
-        WHERE `sl`=".quote($projectInfo_ar['client_sl'])."
+        WHERE `sl`=" . quote($projectInfo_ar['client_sl']) . "
         ");
         $select->pull();
         $clientInfo_ar = $select->getRow();
@@ -128,6 +128,22 @@ class Pages
             'clientInfo_ar' => $clientInfo_ar,
         ]);
 
+    }
+
+    function serviceDetail()
+    {
+        $sl = route()->getUriVariablesAr()['sl'];
+        $select = new QuerySelect("service_list");
+        $select->setQueryString("
+        SELECT * FROM `service_list` 
+        WHERE `sl`=" . quote($sl) . "
+        ");
+        $select->pull();
+        $services_ar = $select->getRow();
+
+        return view("serviceDetailPage_info_html.php", [
+            'services_ar' => $services_ar
+        ]);
     }
 
 }
