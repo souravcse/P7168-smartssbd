@@ -4,6 +4,6 @@
 
         <route val="upload/image" post="uploadImage"/>
         <route val="home" get="index"/>
-        <route val="/" get="index2"/>
+        <route val="/" get="index"/>
     </controller>
 </resources>

@@ -10,7 +10,7 @@ class ModelHeader
          <header class=\"main-header position-absolute w-100\">
             <nav class=\"navbar navbar-expand-xl navbar-dark sticky-header z-10\">
                 <div class=\"container d-flex align-items-center justify-content-lg-between position-relative\">
-                    <a href=\"/index.html\" class=\"navbar-brand d-flex align-items-center mb-md-0 text-decoration-none\">
+                    <a href=\"".mkUrl("/")."\" class=\"navbar-brand d-flex align-items-center mb-md-0 text-decoration-none\">
                         <img src=\"/assets/template-smartssbd/img/logo-white.png\" alt=\"logo\" class=\"img-fluid logo-white\"/>
                         <img src=\"/assets/template-smartssbd/img/logo-color.png\" alt=\"logo\" class=\"img-fluid logo-color\"/>
                     </a>
@@ -23,7 +23,7 @@ class ModelHeader
                     <div class=\"clearfix\"></div>
                     <div class=\"collapse navbar-collapse justify-content-center\">
                         <ul class=\"nav col-12 col-md-auto justify-content-center main-menu\">
-                            <li><a href=\"".mkUrl("home")."\" class=\"nav-link\">Home</a></li>
+                            <li><a href=\"".mkUrl("/")."\" class=\"nav-link\">Home</a></li>
                             <li><a href=\"".mkUrl("services")."\" class=\"nav-link\">Services</a></li>
                             <li><a href=\"".mkUrl("pricing")."\" class=\"nav-link\">Pricing</a></li>
                             <li><a href=\"".mkUrl("about-us")."\" class=\"nav-link\">About Us</a></li>

@@ -18,15 +18,15 @@ class TemplateLeftSidebar
             <div class=\"app-menu navbar-menu\">
         <!-- LOGO -->
         <div class=\"navbar-brand-box\">
-            <a href=\"index.html\" class=\"logo logo-dark\">
+            <a href=\"".mkUrl("manage/dashboard")."\" class=\"logo logo-dark\">
                         <span class=\"logo-sm\">
                             <img src=\"/assets/template-smartssbd/img/logo-color.png\" alt=\"\" height=\"26\">
                         </span>
-                <span class=\"logo-lg\">
+                        <span class=\"logo-lg\">
                             <img src=\"/assets/template-smartssbd/img/logo-color.png\" alt=\"\" height=\"26\">
                         </span>
             </a>
-            <a href=\"index.html\" class=\"logo logo-light\">
+            <a href=\"".mkUrl("manage/dashboard")."\" class=\"logo logo-light\">
                         <span class=\"logo-sm\">
                             <img src=\"/assets/template-smartssbd/img/logo-color.png\" alt=\"\" height=\"26\">
                         </span>
